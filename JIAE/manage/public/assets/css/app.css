@@ -1,0 +1,7 @@
+/* Write your styles */
+
+.am-header-default .am-header-icon {font-size: 20px;}
+.am-icon-search:before{content: "\f002";}
+[class*=am-icon-]:before{display: inline-block;font-size: inherit;-webkit-overflow-scrolling: antialiased;transform: translate(0,0);}
+html{font-size: 62.5%;}
+

@@ -1,0 +1,189 @@
+/* Write your styles */
+.am-header-fixed{
+	z-index: 9;
+}
+.am-navbar{
+	z-index: 9;
+}
+/*.pagename{
+	font-size: 1.6rem;
+}*/
+.user{
+    background: url(../i/admin-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    height: 120px;
+    box-sizing: border-box;
+}
+.user img{
+	margin-top: 2rem;
+	width: 50px;
+	height: 50px;
+}
+.username>p{
+	color: white;
+}
+.box{
+	text-align:center;
+}
+.box img{
+	height: 3.5rem;
+	margin-top: 1.2rem;
+}
+.shadow{
+	position: fixed;
+	/*height: 100%;*/
+	width: 100%;
+	background: rgba(0,0,0,0.5);
+	z-index: 99999;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.shadow>.message{
+	width: 85%;
+	height:28%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background: #EEEEEE;
+	/*display: none;*/
+}
+@keyframes big{
+	from{transform: translate(-50%,-50%) scale(0.01);}
+	to{transform: translate(-50%,-50%) scale(1);}
+}
+.big{
+	animation: big 0.3s 1 ;
+}
+@keyframes small{
+	to{transform: translate(-50%,-50%) scale(0.01);}
+}
+.small{
+	animation: small 0.3s 1;
+}
+.shadow>.message>.message-top{
+	height: 20%;
+	width: 100%;
+	text-align: center;
+	font: 1.8rem/2.5rem "微软雅黑";
+	margin-top: 1rem;
+}
+.shadow>.message>.message-center{
+	height: 45%;
+	width: 100%;
+	padding: 0 15px 15px;
+	text-align: center;
+	font: 1.6rem/2.3rem "微软雅黑";
+	border-bottom: 1px solid #bbb;
+	box-sizing: border-box;
+}
+.shadow>.message>.message-bottom{
+	height: 30%;
+	width: 100%;
+	/*text-align: center;*/
+	
+}
+.shadow>.message>.message-bottom>.am-modal-btn{
+	display: block !important;
+	text-align: center;
+}
+p{
+	padding: 0;
+	margin: 0;
+}
+.am-jiaecontent-one, .am-jiaecontent-two {
+    border-top: 0;
+    margin-top: 10px;
+    background: #fff;
+    border-bottom: 1px solid #d8d8d8;
+}
+.am-jiaecon-two {
+    padding: 0 10px;
+    margin-bottom: 100px;
+}
+.am-jiaecon-two .jiaecon-h3one {
+    line-height: 40px;
+    font-size: 14px;
+    color: #666;
+}
+.am-jiaecon-two .jiaecon-p1 {
+    font-size: 12px;
+    color: #e74144;
+    margin-top: -10px;
+}
+.am-jiaecon-two .jiaecon-p2 {
+    font-size: 12px;
+    margin-top: 15px;
+}
+.am-jiaecon-two .jiaecon-p4 {
+    margin-top: 0 !important;
+}
+.am-jiaecon-two .jiaecon-p5 {
+    color: #e74144;
+    font-size: 12px;
+}
+.am-jiaecon-two .jiaecon-p6 {
+    color: #000;
+    font-size: 12px;
+    height: 35px;
+    line-height: 45px;
+    font-weight: 700;
+}
+.am-jiaecon-two .am-jiaecon-twoTop .jiaecon-p7 {
+    font-size: 12px;
+    margin: 5px auto;
+}
+.am-jiaecon-two .jiaecon-p8 {
+    font-size: 12px;
+}
+.am-jiaecon-two .jiaecon-p2 a, .am-jiaecon-two .jiaecon-p8 a {
+    text-decoration: underline;
+    color: #3366ff;
+}
+.am-jiaecon-two .jiaecon-imgchange {
+    width: 85%;
+    display: block;
+    margin: 10px auto;
+}
+.am-jiaecon-two .jiaecon-img02 {
+     width: 100%; 
+}
+.am-jiaecon-two .am-jiaecon-twoTop .jiaecon-img03 {
+    width: 100%;
+}
+.contentDivv .contentpp1 {
+    cursor: pointer;
+    height: 35px;
+    line-height: 35px;
+}
+.fontred{
+	color: red !important;
+}
+.noneshow{
+	display: block !important;
+}
+.am-gallery-default .am-gallery-title, .am-gallery-overlay .am-gallery-title {
+    font-weight: 400;
+    display: block;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.j-pro-name {
+    color: #333!important;
+}
+.am-gallery-item h3 {
+    margin-top: 0!important;
+}
+.am-gallery h3 {
+    margin: 0;
+}
+.am-gallery-default .am-gallery-title {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    color: #555;
+}

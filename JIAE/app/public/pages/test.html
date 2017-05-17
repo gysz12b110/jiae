@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+</head>
+<body>
+        账号：<input type="text" id="username">
+        密码：<input type="password" id="password">
+        电话：<input type="text" id="mobile">
+        <button>提交</button>
+</body>
+<script src="../assets/js/jquery203.js"></script>
+<script>
+    $("button").click(function(){
+        var username=$("#username").val();
+        var password=$("#password").val();
+        var mobile=$("#mobile").val();
+        $.post("register",{user:username,pass:password,mobile:mobile},function(result){
+            alert(result);
+        })
+    })
+</script>
+</html>

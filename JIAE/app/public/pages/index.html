@@ -1,0 +1,510 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="加意新品(jiae.com)是一种创意的生活方式，让每个人享受设计的乐趣，每天加一点创意。 对于消费者，你可以抢鲜购买到原创的设计精品，也可以找到设计师为你提供专属的创意设计服务。 对于设计师，你可以免费发布设计新品和设计服务，帮助你自由实现设计梦想。">
+		<meta name="keywords" content="创意电商、新品电商、创意产品、创意家居、创意设计、创意礼物、创意生活、设计师、极客">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+		<title>加意新品</title>
+		<!-- Set render engine for 360 browser -->
+		<meta name="renderer" content="webkit">
+		<!-- No Baidu Siteapp-->
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<link rel="shortcut icon" href="../assets/i/favicon.ico">
+		<!-- Add to homescreen for Chrome on Android -->
+		<meta name="mobile-web-app-capable" content="yes">
+		<link rel="icon" sizes="192x192" href="../assets/i/app-icon72x72@2x.png">
+		<!-- Add to homescreen for Safari on iOS -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="Amaze UI" />
+		<link rel="apple-touch-icon-precomposed" href="../assets/i/app-icon72x72@2x.png">
+		<!-- Tile icon for Win8 (144x144 + tile color) -->
+		<meta name="msapplication-TileImage" content="../assets/i/app-icon72x72@2x.png">
+		<meta name="msapplication-TileColor" content="#0e90d2">
+		<link rel="stylesheet" href="../assets/css/amazeui.min.css">
+		<link rel="stylesheet" href="../assets/css/app.css">
+		<link rel="stylesheet" href="../assets/css/public.css">
+		<link rel="stylesheet" href="../assets/css/home.css">
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/amazeui.min.js"></script>
+		<script src="../assets/js/jquery.lazyload.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/main.js"></script>
+	</head>
+
+	<body style="background-color: #f7f7f7;" class="am-with-fixed-header am-with-fixed-navbar">
+		<div ng-view id="myAPP"></div>
+		<!--底部-->
+		<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="">
+			<ul id="container" class="am-navbar-nav am-cf am-avg-sm-4" style="background-color:#fff;" id="J-footer-menu">
+				<li>
+					<a href="#" class="" id="home">
+						<span id="homeIcon" class="am-icon-home footerTitleMiao footerTitleMiaoActive headIcon"></span>
+						<span id="homeTitle" class="am-navbar-label footerTitleFont footerTitleFontActive headTitle">首页</span>
+					</a>
+				</li>
+				<li>
+					<a href="/views/catalog.html" class="" id="typelist">
+						<span id="typelistIcon" class="am-icon-bars footerTitleMiao headIcon"></span>
+						<span id="typelistTitle" class="am-navbar-label footerTitleFont headTitle">分类</span>
+					</a>
+				</li>
+				<li>
+					<a href="/views/shopcar.html" class="" id="cart">
+						<span id="cartIcon" class="am-icon-shopping-cart footerTitleMiao headIcon" style="position:relative;">
+                  <span class="am-badge am-badge-danger am-round" id="J-cart-num" 
+                  style="position: absolute;top: -.2rem;left: .8rem;color: #fff;border-radius: 1000px;-webkit-text-fill-color: #fff;-webkit-text-stroke-color: #fff;font-weight: 300;display:none;">
+                  0</span>
+						</span>
+						<span id="cartTitle" class="am-navbar-label footerTitleFont headTitle">购物车</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" id="login">
+						<!-- <a id="J-hd-btn-login" href="login"> -->
+						<span id="loginIcon" class="am-icon-user footerTitleMiao headIcon"></span>
+						<span id="loginTitle" class="am-navbar-label footerTitleFont headTitle">登录</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--在这里编写你的代码-->
+
+		<!--搜索框-->
+		<header class="am-header am-header-default am-header-fixed am-no-layout">
+			<!--搜索框加按钮-->
+			<div class="am-from-group am-header-title headerSerachDiv">
+				<input type="text" id="search" class="am-form-field am-input-sm headSearchInput keywords am-round" placeholder="快搜新品" value="小目智能护眼宝" onfocus="if(value=='小目智能护眼宝'){value=''}" onblur="if(value==''){value='小目只能护眼宝'}" style="border: none;width: 100%;padding: 5px;padding-left: 15px;" />
+				<a href="javascript:;" class="headSerchIcon btn-submit am-input-group-btn">
+					<i class="am-icon-search am-header-icon" style="line-height: 30px;height: 30px;overflow: hidden;">
+    			</i>
+				</a>
+			</div>
+		</header>
+
+		<!--轮播图-->
+		<div data-am-widget="slider" class="am-slider am-slider-a1 am-no-layout" data-am-slider="{&quot;directionNav&quot;:false}">
+			<div class="am-viewport" style="overflow: hidden; position: relative;">
+				<ul class="am-slides" style="width: 1400%; transition-duration: 0s; transform: translate3d(-414px, 0px, 0px);">
+					<!-- 幻灯片 开始 -->
+					<li class="am-active-slide" style="width: 414px; float: left; display: block;">
+						<a href="#"><img class="lazy" src="../assets/i/banner1.jpg" draggable="false"></a>
+					</li>
+					<li class="" style="width: 414px; float: left; display: block;">
+						<a href="#"><img class="lazy" src="../assets/i/banner2.jpg" draggable="false"></a>
+					</li>
+
+					<li style="width: 414px; float: left; display: block;" class="">
+						<a href="#"><img class="lazy" src="../assets/i/banner3.jpg" draggable="false"></a>
+					</li>
+
+					<li style="width: 414px; float: left; display: block;" class="">
+						<a href="#"><img class="lazy" src="../assets/i/banner4.jpg" draggable="false"></a>
+					</li>
+
+					<li style="width: 414px; float: left; display: block;" class="">
+						<a href="#"><img class="lazy" src="../assets/i/banner5.jpg" draggable="false"></a>
+					</li>
+				</ul>
+			</div>
+			<ol class="am-control-nav am-control-paging">
+				<!--轮播图小点-->
+				<li>
+					<!--<a class="am-active">1</a><i></i>-->
+				</li>
+				<li>
+					<!--<a class="">2</a><i></i>-->
+				</li>
+				<li>
+					<!--<a class="">3</a><i></i>-->
+				</li>
+				<li>
+					<!--<a class="">4</a><i></i>-->
+				</li>
+				<li>
+					<!--<a class="">5</a><i></i>-->
+				</li>
+			</ol>
+		</div>
+		<img src="../assets/i/qqsf.jpg" class="j-link-img">
+
+		<!--六大分类-->
+		<ul id="galy" data-am-widget="gallery" class="am-gallery am-avg-sm-4 am-avg-md-8 am-avg-lg-4 am-gallery-default am-no-layout" data-am-gallery="{ pureview: false }">
+			<li style="text-align: center;" class="act">
+				<a href="/views/catalog.html"><img class="am-circle" src="../assets/i/top1.png" alt="优选家居">
+					<h3 class="am-gallery-title circle-font">优选家居</h3>
+				</a>
+			</li>
+			<li style="text-align: center;" class="act">
+				<a href="/views/catalog.html"><img class="am-circle" src="../assets/i/top2.png" alt="品味厨房">
+					<h3 class="am-gallery-title circle-font">品味厨房</h3>
+				</a>
+			</li>
+			<li style="text-align: center;" class="act">
+				<a href="/views/catalog.html"><img class="am-circle" src="../assets/i/top3.png" alt="生活电器">
+					<h3 class="am-gallery-title circle-font">生活电器</h3>
+				</a>
+			</li>
+			<li style="text-align: center;" class="act">
+				<a href="/views/catalog.html"><img class="am-circle" src="../assets/i/top4.png" alt="极客数码">
+					<h3 class="am-gallery-title circle-font">极客数码</h3>
+				</a>
+			</li>
+			<li style="text-align: center;" class="act">
+				<a href="/views/catalog.html"><img class="am-circle" src="../assets/i/top5.png" alt="美酒伴侣">
+					<h3 class="am-gallery-title circle-font">美酒伴侣</h3>
+				</a>
+			</li>
+			<li style="text-align: center;" class="act">
+				<a href="/views/catalog.html"><img class="am-circle" src="../assets/i/top6.png" alt="轻松办公">
+					<h3 class="am-gallery-title circle-font">轻松办公</h3>
+				</a>
+			</li>
+			<li style="text-align: center;">
+				<a href="/views/newgoods.html"> <img class="am-circle" src="../assets/i/top7.png" alt="新品专区">
+					<h3 class="am-gallery-title circle-font">新品专区</h3>
+				</a>
+			</li>
+			<li style="text-align: center;">
+				<a href="#"><img class="am-circle" src="../assets/i/top8.png" alt="翻牌福利">
+					<h3 class="am-gallery-title circle-font">翻牌福利</h3>
+				</a>
+			</li>
+		</ul>
+
+		<!--以下品牌区-->
+
+		<style type="text/css">
+			.am-panel-bd {
+				padding: 1.25rem;
+			}
+			
+			.am-g-fixed div {
+				overflow: hidden;
+				height: auto;
+				padding-left: 0.5rem;
+				padding-right: 0.5rem;
+			}
+			
+			.fixsize {
+				padding-bottom: 22%;
+				width: 50%;
+				height: 0px !important;
+			}
+			
+			.brand-logo {
+				width: 60%;
+				top: 18%;
+				position: relative;
+				left: 20%;
+			}
+		</style>
+		<div class="am-panel am-panel-default">
+			<div class="am-panel-hd" style="background-color: #ffffff;height: 40px;">
+				<span class="am-avg-sm-2 am-avg-md-2 am-avg-lg-2" style="width: 30%;">品牌区域</span>
+				<span id="marebrand" class="am-avg-sm-2 am-avg-md-2 am-avg-lg-2 brand-subtitle">更多品牌</span>
+			</div>
+			<!--典型品牌-->
+			<div class="am-panel-bd" style="overflow: hidden;">
+				<div style="margin-left: 0rem;">
+					<!--品牌第一行-->
+					<div class="firstlinelog" style="margin: 0 auto;overflow: hidden;margin-left: -5px;">
+						<a href="javascript:;" class="brnd" data-id = "17" >
+							<div id="toplogo" class="am-u-sm-6 fixsize">                    
+								<img src="../assets/i/brand1.jpg" class="am-img-responsive" />
+								<div class="brand-logo-div">
+									<img src="../assets/i/brand1logo.png" class="am-img-responsive brand-logo" style="width: 30%;left: 35%;" />
+								</div>
+							</div>
+						</a>
+						<a href="javascript:;" class="brnd" data-id = "18">
+							<div class="am-u-sm-3">
+								<img src="../assets/i/brand2.jpg" class="am-img-responsive" style="width: 100%;padding-bottom: 17%;" />
+								<div class="brand-logo-div">
+									<img src="../assets/i/brand2logo.png" class="am-img-responsive brand-logo" style="left: 20%;" />
+								</div>
+							</div>
+						</a>
+						<a href="javascript:;" class="brnd" data-id = "19">
+							<div class="am-u-sm-3 ">
+								<img src="../assets/i/brand3.jpg" class="am-img-responsive" style="width: 100%;padding-bottom: 17%;" />
+								<div class="brand-logo-div">
+									<img src="../assets/i/brand3logo.png" class="am-img-responsive brand-logo" style="left: 20%;" />
+								</div>
+							</div>
+						</a>
+					</div>
+					<!--品牌第二行-->
+					<div id="secondLogo" class="am-g am-g-fixed" style="margin-top: 15px;">
+						<a href="javascript:;" class="brnd" data-id = "20">
+							<div class="am-u-sm-3">
+								<img class="am-img-responsive" src="../assets/i/brand4.jpg">     
+								<div class="brand-logo-div">
+									<img class="am-img-responsive brand-logo" src="../assets/i/brand4logo.png">
+								</div>
+							</div>
+						</a>
+						<a href="javascript:;" class="brnd" data-id = "21">
+							<div class="am-u-sm-3">
+								<img class="am-img-responsive" src="../assets/i/brand5.jpg">
+								<div class="brand-logo-div">
+									<img class="am-img-responsive brand-logo" src="../assets/i/brand5logo.png">
+								</div>
+							</div>
+						</a>
+						<a href="javascript:;" class="brnd" data-id = "22">
+							<div class="am-u-sm-3">
+								<img class="am-img-responsive" src="../assets/i/brand6.jpg">
+								<div class="brand-logo-div">
+									<img class="am-img-responsive brand-logo" src="../assets/i/brand6logo.png">
+								</div>
+							</div>
+						</a>
+						<a href="javascript:;" class="brnd" data-id = "23">
+							<div class="am-u-sm-3">
+								<img class="am-img-responsive" src="../assets/i/brand7.jpg">
+								<div class="brand-logo-div">
+									<img class="am-img-responsive brand-logo" src="../assets/i/brand5logo.png">
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--五大类-->
+		<div class="am-panel am-panel-default" id="zhanshi"  style="margin-top: -21px;">
+			<!--家居类展示(原有)-->
+			<div class="am-panel-hd productPanelTitle">
+				<hr data-am-widget="divider" style="width: 80%;" class="am-divider am-divider-default am-no-layout">
+				<span class="am-badge productPanelSpan tile">家居</span>
+			</div>
+			<div class="am-panel-bd">
+				<ul data-am-widget="gallery" class="am-gallery am-avg-sm-2 am-avg-md-2 am-avg-lg-2 am-gallery-default am-no-layout" data-am-gallery="{ pureview: false }">
+					<li>
+						<div class="am-gallery-item">
+							<a href="javascript:;" class="ggds" data-id="">
+								<div class="productImg">
+									<!--lazy懒加载 // data-original懒加载必须有-->
+									<img class="tm-circle lazy" data-original="" src="" alt="" style="display: block;">
+								</div>
+							</a>
+							<a href="##" class="am-icon-btn am-icon-shopping-cart productShopping am-icon-sm j-btn-catalog"></a>
+							<h3 class="am-gallery-title productDescT" style="margin-top: -30px;"></h3>
+							<span class="am-gallery-desc productDesc productDescT"></span>
+							<span class="am-gallery-desc productDesc productDescT" style="color: red;"></span>
+						</div>
+					</li>
+					<li>
+						<div class="am-gallery-item">
+							<a href="javascript:;" class="ggds" data-id="">
+								<div class="productImg">
+									<img class="tm-circle lazy" data-original="" src="" alt="" style="display: block;">
+								</div>
+							</a>
+							<a href="##" class="am-icon-btn am-icon-shopping-cart productShopping am-icon-sm j-btn-catalog"></a>
+							<h3 class="am-gallery-title productDescT" style="margin-top: -30px;"></h3> 
+							<span class="am-gallery-desc productDesc productDescT"></span>
+							<span class="am-gallery-desc productDesc productDescT" style="color: red;"></span>
+						</div>
+					</li>
+					<li>
+						<div class="am-gallery-item">
+							<a href="javascript:;" class="ggds" data-id="">
+								<div class="productImg">
+									<img class="tm-circle lazy" data-original="" src="" alt="" style="display: block;">
+								</div>
+							</a>
+							<a href="##" class="am-icon-btn am-icon-shopping-cart productShopping am-icon-sm j-btn-catalog"></a>
+							<h3 class="am-gallery-title productDescT" style="margin-top: -30px;"></h3>
+							<span class="am-gallery-desc productDesc productDescT"></span>
+							<span class="am-gallery-desc productDesc productDescT" style="color: red;"></span>
+						</div>
+					</li>
+					<li>
+						<div class="am-gallery-item">
+							<a href="javascript:;" class="ggds" data-id="">
+								<div class="productImg">
+									<img class="tm-circle lazy" data-original="" src="" alt="" style="display: block;">
+								</div>
+							</a>
+							<a href="##" class="am-icon-btn am-icon-shopping-cart productShopping am-icon-sm j-btn-catalog"></a>
+							<h3 class="am-gallery-title productDescT" style="margin-top: -30px;"></h3>
+							<span class="am-gallery-desc productDesc productDescT"></span>
+							<span class="am-gallery-desc productDesc productDescT" style="color: red;"></span>
+						</div>
+					</li>
+					<li>
+						<div class="am-gallery-item">
+							<a href="javascript:;" class="ggds"  data-id="">
+								<div class="productImg">
+									<img class="tm-circle lazy" data-original="" src="" alt="" style="display: block;">
+								</div>
+							</a>
+							<a href="##" class="am-icon-btn am-icon-shopping-cart productShopping am-icon-sm j-btn-catalog"></a>
+							<h3 class="am-gallery-title productDescT" style="margin-top: -30px;"></h3> 
+							<span class="am-gallery-desc productDesc productDescT"></span>
+							<span class="am-gallery-desc productDesc productDescT" style="color: red;"></span>
+						</div>
+					</li>
+					<li>
+						<div class="am-gallery-item">
+							<a href="javascript:;" class="ggds" data-id="">
+								<div class="productImg">
+									<img class="tm-circle lazy" data-original="" src="" alt="" style="display: block;">
+								</div>
+							</a>
+							<a href="##" class="am-icon-btn am-icon-shopping-cart productShopping am-icon-sm j-btn-catalog" ></a>
+							<h3 class="am-gallery-title productDescT" style="margin-top: -30px;"></h3>
+							<span class="am-gallery-desc productDesc productDescT"></span>
+							<span class="am-gallery-desc productDesc productDescT" style="color: red;"></span>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--家居-->
+		
+		<!--遮罩层-->
+		<div id="zzc" class="am-dimmer am-active" data-am-dimmer="" style="display: none;"></div>
+		<!--弹框显示添加购物车成功-->
+		<div id="alert" class="am-modal am-modal-alert am-modal-active" tabindex="-1" id="jiae-alert" style="display: none; margin-top: -66px;">
+			<div class="am-modal-dialog">
+			    <div class="am-modal-hd">消息</div>
+			    <div class="am-modal-bd" id="alertMsg">加入购物车成功！</div>
+			    <div class="am-modal-footer">
+			        <span class="am-modal-btn" id="sure">确定</span>
+			    </div>
+			</div>
+		</div>
+
+		<!--回到顶部-->
+		<div data-am-widget="gotop" class="am-gotop am-gotop-fixed am-no-layout am-active" style="padding-right: 5rem;">
+			<a href="#top" title="回到顶部" class="am-icon-btn am-icon-arrow-up am-active" id="amz-go-top"></a>
+		</div>
+		
+		
+		<script type="text/javascript">
+			if (sessionStorage.username) {
+				$("#loginTitle").text("个人中心");
+				$("#login").on("click",function () {
+					location.href="presonalcenter.html";
+				});
+			}else{
+				$("#login").on("click",function () {
+					location.href="login.html";
+				});
+				$("#loginTitle").text("登录");
+//				location.href="login.html";
+			}
+			//搜索跳转并传搜索框的值发到search页面
+			$('.btn-submit').click(function() {
+				location.href = "/views/search.html"; //+ ?id=$('#search').val()
+				localStorage.setItem("search", $('#search').val())
+				console.log($('#search').val());
+			});
+			//八大类跳转分类页面
+			var x;
+			$('#galy').children('.act').click(function() {
+				localStorage.setItem("act", $(this).index());
+				console.log($(this).index());
+			})
+			//清楚storage
+			$('#typelist').click(function() {
+				localStorage.removeItem("act");
+			})
+			//品牌跳转
+			$('#marebrand').click(function() {
+				location.href = "/views/brand_area.html";
+			})
+			
+			//商品展示
+			
+			//遍历创建主页商品展示区
+			var til=["家居","厨房","电器","数码","酒具"];
+			for(var i=1;i<til.length;i++){
+				$('#zhanshi').clone(true).appendTo('body');
+				$('.tile').eq(i).text(til[i]);	
+			}
+			//页面加载获取数据库商品信息动态添加到商品展示区
+			$('body').ready(function(){
+			    $.get("/goods_type_id", function(result) {
+			    	$.each(result,function(index, item){
+			    		$('.productImg>img').eq(index).attr('src','../assets/i/shoping-img/' + item.pic1 + '.jpg');
+			    		$('.productImg>img').eq(index).attr('data-original','../assets/i/shoping-img/' + item.pic1 + '.jpg');
+			    		$('.ggds').eq(index).attr('data-id',item.id);
+			    		$('.am-gallery-item>h3').eq(index).text(item.title);
+			    		$('.am-gallery-item>h3').next('span').next().eq(index).text('￥' + item.price + '.00');
+			    	})
+			    	//图片懒加载
+					$("img.lazy").lazyload({
+					   load:function() { 
+							$(this).css('opacity', 0).animate({'opacity':1},1500);
+						}
+					 });
+			    });
+			    //获取商品对应的品牌名并添加
+			    $.get("/brand", function(result) {
+			    	$.each(result,function(index, item){
+			    		$('.am-gallery-item>h3').next('span').eq(index).text(item.name);
+			    	})
+			    });
+			});
+			
+			//购物车遮罩层
+			$('#sure').click(function(){
+		           $('#zzc').hide();
+		           $('#alert').hide();
+	            });
+	           	var add=1;   //购物车图标数量
+		      	var gss,prc = 0;
+		      	//console.log($('.ggds'))
+		      	$('.ggds').click(function(){
+		      		location.href="goods.html";
+		      		gdsid=$(this).attr('data-id');
+		      		location.replace("/views/goods.html?gdsid=" + gdsid);
+		      	});
+		      	$('.brnd').click(function(){
+		      		location.href="branddetail.html";
+		      		brandid=$(this).attr('data-id');
+		      		location.replace("/views/branddetail.html?brandid=" + brandid);
+		      	})
+		      	//点击商品购物车图标添加购物车
+		       	$('.productShopping').click(function(){
+		       		$('#J-cart-num').text(add++).show();  //购物车显示数量
+					txt = $(this).next('h3').text();
+					prc = $(this).next('h3').next('span').next('span').text();
+					prc = prc.split('￥')[1];
+					//console.log(prc);
+					
+					//获取商品id与商品名字对比从而获取对应商品的id
+					$.get("/goods_type_id", function(result) {
+						$.each(result,function(index, item){
+							if(txt == item.title){
+								gss = item.id;
+							}
+						});
+						//上传添加到购物车的商品具体信息
+						$.post("/shopcart", {
+			       			gsid:gss,
+			       			usid:1,
+			       			cnt:1,
+			       			sprice:prc,
+			       			price:prc
+		       			},function(result) {
+	            			if(result == true){
+	            				$('#zzc').show();
+			       				$('#alert').show();
+	            			}
+            			});
+					});	
+		    	});
+		    	
+		</script>
+
+	</body>
+
+</html>
