@@ -1,8 +1,8 @@
 {
-  "name": "amaze_app",
+  "name": "JIAE",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "jiae app",
+  "main": "app.js",
   "directories": {
     "test": "test"
   },
