@@ -8,7 +8,7 @@ var userRoutes = require("./server/controller/userController");
 var MessageXSend = require('./server/sms/messageXSend.js');
 var urlParser = bodyParser.urlencoded({ extended: false });
 app.use(express.static(__dirname + "/public"));
-
+//6666
 app.get("/", function(req, res) {
     res.sendFile(__dirname + "/public/pages/test.html");
 })
