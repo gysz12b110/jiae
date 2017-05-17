@@ -36,6 +36,7 @@
 
 /* .am-header .am-header-nav{top:15px;} */
 
+
 .productShopping {
     background-color: rgba(186, 186, 186, 0.5);
     position: absolute;
@@ -51,6 +52,8 @@
 .am-icon-sm:before {
     padding-top: 3px;
 }
+
+/*hahah*/
 
 .lazy {
     margin: 0px auto;
