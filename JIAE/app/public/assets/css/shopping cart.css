@@ -23,6 +23,10 @@ header{
         float: left;
         line-height: 50px;
     }
+    .hedleft div{
+        width:100%;
+        text-align: left;
+    }
     header span{
         font-size: 26px;
         display: block;
@@ -30,6 +34,10 @@ header{
         text-align: center;
         width:33.3%;
         line-height: 50px;
+    }
+    header  a{
+        display: block;
+        text-decoration: none;
     }
     .hedright{
         width:33.3%;
@@ -40,6 +48,10 @@ header{
         text-align: right;
         float: right;
         line-height: 50px;  
+    }
+    .hedright div{
+        width:100%;
+        text-align: right;
     }
     section{
         max-width: 1920px;
@@ -64,4 +76,11 @@ header{
         background:#e74144;
         height:40px;
         line-height: 40px;
+        
+    }
+    .setlast a{
+        text-decoration: none;
+        color:#000000;
+
+ 
     }
