@@ -1,0 +1,22 @@
+html{
+	/* 1rem=100px */
+	font-size: 625%;
+}
+body,h1,h2,h3,h4,p,ul,ol,form,fieldset,figure,img{
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #fff;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+	font-size: .16rem;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.active{
+	background-color: black;
+}
