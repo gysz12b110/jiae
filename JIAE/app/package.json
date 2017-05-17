@@ -1,7 +1,7 @@
 {
   "name": "JIAE",
   "version": "1.0.0",
-  "description": "",
+  "description": "jiae app",
   "main": "app.js",
   "directories": {
     "test": "test"
