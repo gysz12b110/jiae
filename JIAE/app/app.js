@@ -5,9 +5,7 @@ var bodyParser = require("body-parser"); //URL解析库
 var pools = require("./server/utils/pool"); //工具类
 var tools = require("./server/utils/tools");
 var userRoutes = require("./server/controller/userController");
-// var orderRoutes=require("./server/controller/orderController");
 var MessageXSend = require('./server/sms/messageXSend.js');
-
 var urlParser = bodyParser.urlencoded({ extended: false });
 app.use(express.static(__dirname + "/public"));
 
@@ -17,7 +15,6 @@ app.get("/", function(req, res) {
 
 //用户路由
 userRoutes(app, urlParser, tools,pools);
-// orderRoutes(app, urlParser, tools,pools);
 app.listen(9000);
 console.log("server start in 9000");
 
