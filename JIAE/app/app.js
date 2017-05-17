@@ -6,7 +6,7 @@ var pools = require("./server/utils/pool"); //工具类
 var tools = require("./server/utils/tools");
 var userRoutes = require("./server/controller/userController");
 var MessageXSend = require('./server/sms/messageXSend.js');
-
+//哈哈哈哈
 var urlParser = bodyParser.urlencoded({ extended: false });
 app.use(express.static(__dirname + "/public"));
 
