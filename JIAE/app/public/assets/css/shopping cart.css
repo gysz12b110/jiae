@@ -1,0 +1,111 @@
+/*html,body,div,span,iframe,map,font,img,a img,samp,strong,hr,
+h1,h2,h3,h4,h5,h6,b,p,blockquote,a,address,code,dl,dt,dd,ol,
+ul,li,form,label,table,tr,td,th{padding:0;margin:0;border:0;font-weight:normal;font-size:12px;font-family: Arial, Helvetica, sans-serif; color:#000;}
+body{background: #fff;}ul,li{list-style:none;}dl{}.f_l{float:left;}.f_r{float:right;}*/
+header{
+    max-width: 1920px;
+    height:50px;
+    background-color:#e25a5b;
+}
+  .fit{
+        width: 20px;
+        height: 20px;
+
+    }
+    .fit::before{
+        content:"\f013"; 
+    }
+    .hedleft{
+        color:#ccc;
+        width:33.3%;
+        font-size: 25px;
+        display: block;
+        float: left;
+        line-height: 50px;
+    }
+    .hedleft div{
+        width:100%;
+        text-align: left;
+    }
+    header span{
+        font-size: 26px;
+        display: block;
+        float: left;
+        text-align: center;
+        width:33.3%;
+        line-height: 50px;
+    }
+    header  a{
+        display: block;
+        text-decoration: none;
+    }
+    .hedright{
+        width:33.3%;
+        height:50px;
+        color:#ccc;
+        font-size: 25px;
+        display: block;
+        text-align: right;
+        float: right;
+        line-height: 50px;  
+    }
+    .hedright div{
+        width:100%;
+        text-align: right;
+    }
+    section{
+        max-width: 1920px;
+        
+    }
+    .setfirst{
+        width:100%;
+        margin-top:20px;
+        text-align:center;
+
+    }
+    .setcenter{
+        margin-top:20px;
+        width:100%;
+        text-align: center;
+    }
+    .setlast{
+        margin-top:20px;
+        width:30%;
+        text-align: center;
+        margin-left:35%;
+        background:#e74144;
+        height:40px;
+        line-height: 40px;
+        
+    }
+    .setlast a{
+        text-decoration: none;
+        color:#000000;
+
+ 
+    }
+    .Empty-shopcart{
+        width:100%;
+        /*display:none;*/
+    }
+    .Settlement-shopcart{
+        width:100%;
+        height:40px;
+        position:fixed;
+        bottom:0px;
+        left:0px;
+        background:#000000;
+        display: none;
+    }
+    .Settlement-shopcart span{
+        color:#ccc;
+     }
+    .Settlement{
+        width:25%;
+        color:#fff;
+        height:40px;
+        line-height: 40px;
+        float:right;
+        background:#e25a5b;
+        text-align: center;
+    }

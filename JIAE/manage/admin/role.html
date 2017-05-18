@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>role</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="css/role.css"/>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+		<script type="text/javascript" src="js/angular1.5.8.js" ></script>
+	</head>
+	<body>
+		<div>
+			<fieldset>
+				<legend class="goods">角色管理</legend>
+				<div id="top">
+					<div>
+						<button id="addRole" class="add addOne"><i class="fa fa-plus-square icon"></i>新增</button>
+					</div>
+				</div>
+				<table ng-controller="myctrl">
+					<tr class="oneTr">
+						<td style="width: 30%; height: 40px;">ID</td>
+						<td style="width: 40%; height: 40px;">职位</td>
+						<td style="width: 30%; height: 40px;">操作</td>
+					</tr>
+					<tr ng-repeat="user in list">
+						<td>{{user.id}}</td>
+						<td>{{user.role}}</td>
+						<td class="addbtn">
+							<span title="修改" class="reviseRole fa fa-pencil-square-o"></span>
+							<span title="冻结" class="frozenRole fa fa-trash"></span>
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+		</div>
+	</body>
+	<script src="js/sweetalert.min.js"></script>
+	<script src="js/role.js"></script>
+</html>
