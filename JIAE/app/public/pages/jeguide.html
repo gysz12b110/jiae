@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+		<script src="../assets/js/jquery203.js"></script>
 		<script type="text/javascript" src="../assets/js/jeguide.js"></script>
 		<link rel="stylesheet" type="text/css" href="../assets/css/reset.css"/>
 		<link rel="stylesheet" type="text/css" href="../assets/css/jeguide.css"/>
@@ -11,6 +12,10 @@
 		<link rel="stylesheet" href="../assets/css/app.css">
 		<link rel="stylesheet" href="../assets/css/public.css">
 		<link rel="stylesheet" href="../assets/css/home.css">
+		
+		<script src="../assets/js/amazeui.min.js"></script>
+		<script src="../assets/js/jquery.lazyload.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/main.js"></script>
 		<style type="text/css">
 			/*body{
 				max-width: 640px;
@@ -68,63 +73,12 @@
 			.fita{
 				display: block;
 			}
-			section{
-				width: 100%;
-				height: auto;
-			}
-			section>img{
-				width: 100%;
-				height: auto;
-			}
-			.kongdiv{
-				line-height: 49px;
-			}
-			.serve{
-				width: 100%;
-				height: auto;
-				display: -moz-box;
-				display: -webkit-box;
-				margin-top: 3%;
-			}
-			.servelist{
-				/*background: #CCCCCC;*/
-				-webkit-box-flex: 1;
-				-moz-box-flex: 1;
-				margin: 0;
-				padding: 0;
-			}
-			.servecontent{
-				-webkit-box-flex: 90;
-				-moz-box-flex: 90;
-				background: #ccc;
-				position: relative;
-				
-			}
-			.servelist>li{
-				/*text-align: center;*/
-				line-height: 5rem;
-				background: #f1f1f1;
-				border: 1px solid #F1F1F1;
-				border-bottom-color: white;
-				font-size: 1.4rem;
-			}
-			.servelist>li:nth-child(1){
-				background: #e25a5b;
-				
-			}
-			.servelist>li:nth-child(1)>a{
-				color: white;
-			}
-			.servelist>li>a{
-				display: block;
-				padding: 0.2em 0.4em;
-			}
 		</style>
 		
 	</head>
 	<body>
 		<header>
-			<div class="return"><a href="#">&lt;</a></div>
+			<div class="return"><a href="index.html">&lt;</a></div>
 			<div class="headertitle">加意新品</div>
 			<div class="fit"><a href="#" class="fita"></a></div>
 		</header>
@@ -134,33 +88,110 @@
 		</section>
 		<div class="serve">
 			<ul class="servelist">
-				<li><a href="#">新手指南</a></li>
-				<li><a href="#">配送与支付</a></li>
-				<li><a href="#">售后服务</a></li>
-				<li><a href="#">关于加意</a></li>
+				<li class="servelist-1"><a href="#">新手指南</a></li>
+				<li class="servelist-2"><a href="#">配送与支付</a></li>
+				<li class="servelist-3"><a href="#">售后服务</a></li>
+				<li class="servelist-4"><a href="#">关于加意</a></li>
 			</ul>
 			<div class="servecontent">
 				<ul class="servecontent-ul1">
-					<a href="">
+					<a href="#">
 						<li>
 							<p>
-								<i></i>&nbsp;&nbsp;&nbsp;购物流程
+								<i class="shopingprocess"></i>&nbsp;&nbsp;&nbsp;购物流程
+							</p>
+						</li>
+						<li>
+							<p>
+								<i class="service"></i>&nbsp;&nbsp;&nbsp;联系客服
+							</p>
+						</li>
+						<li>
+							<p>
+								<i class="user-agreement"></i>&nbsp;&nbsp;&nbsp;用户协议
 							</p>
 						</li>
 					</a>
-					<a href=""></a>
-					<a href=""></a>
+					
 				</ul>
 				<ul class="servecontent-ul2">
-					
+					<a href="#">
+						<li>
+							<p>
+								<i class="delivery-time"></i>&nbsp;&nbsp;&nbsp;配送时间及范围
+							</p>
+						</li>
+						<li>
+							<p>
+								<i class="delivery-charge"></i>&nbsp;&nbsp;&nbsp;配送收费标准
+							</p>
+						</li>
+						<li>
+							<p>
+								<i class="pay"></i>&nbsp;&nbsp;&nbsp;支付方式
+							</p>
+						</li>
+					</a>
 				</ul>
 				<ul class="servecontent-ul3">
-					
+					<a href="#">
+						<li>
+							<p>
+								<i class="examine-goods"></i>&nbsp;&nbsp;&nbsp;验货和拒收政策
+							</p>
+						</li>
+						<li>
+							<p>
+								<i class="no-hassle-sales-return"></i>&nbsp;&nbsp;&nbsp;七天无理由退换货
+							</p>
+						</li>
+						<li>
+							<p>
+								<i class="reimburse"></i>&nbsp;&nbsp;&nbsp;退换货及退款流程
+							</p>
+						</li>
+					</a>
 				</ul>
 				<ul class="servecontent-ul4">
-					
+					<a href="#">
+						<li>
+							<p>
+								<i class="know-je"></i>&nbsp;&nbsp;&nbsp;了解加意
+							</p>
+						</li>
+						<li>
+							<p>
+								<i class="development-history"></i>&nbsp;&nbsp;&nbsp;发展历程
+							</p>
+						</li>
+						<li>
+							<p>
+								<i class="news-report"></i>&nbsp;&nbsp;&nbsp;新闻报道
+							</p>
+						</li>
+						<li>
+							<p>
+								<i class="join-je"></i>&nbsp;&nbsp;&nbsp;加入加意
+							</p>
+						</li>
+						<li>
+							<p>
+								<i class="business-cooperation"></i>&nbsp;&nbsp;&nbsp;商务合作
+							</p>
+						</li>
+					</a>
 				</ul>
 			</div>
 		</div>
+		<footer>
+			<ul class="foot-ul">
+				
+					<li><a><i class="home-page"></i><span style="color: rgb(231,65,68);">首页</span></a></li>
+					<li><a><i class="classify"></i><span>分类</span></a></li>
+					<li><a><i class="shopping-cart"></i><span>购物车</span></a></li>
+					<li><a><i class="logo-in"></i><span>登录</span></a></li>
+				
+			</ul>
+		</footer>
 	</body>
 </html>
