@@ -5,9 +5,9 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
 		<script src="../assets/js/jquery203.js"></script>
-		<script type="text/javascript" src="../assets/js/myafter-sale.js"></script>
+		<script type="text/javascript" src="../assets/js/coupon.js"></script>
 		<link rel="stylesheet" type="text/css" href="../assets/css/reset.css"/>
-		<link rel="stylesheet" type="text/css" href="../assets/css/myafter-sale.css"/>
+		<link rel="stylesheet" type="text/css" href="../assets/css/coupon.css"/>
 		<link rel="stylesheet" href="../assets/css/amazeui.min.css">
 		<link rel="stylesheet" href="../assets/css/app.css">
 		<link rel="stylesheet" href="../assets/css/public.css">
@@ -73,8 +73,12 @@
 			.fita{
 				display: block;
 			}
+			
 			.kongdiv {
-				line-height: 49px;
+				line-height: 4rem;
+			}
+			.kongdiv-2{
+				line-height: 0;
 			}
 		</style>
 	</head>
@@ -85,14 +89,28 @@
 			<div class="fit"><a href="#" class="fita"></a></div>
 		</header>
 		<div class="kongdiv">&nbsp;</div>
+		<section>
+			<div>
+				<ul class="indentlist">
+					<li class="obligation"><span>未使用</span></li>
+					<li class="underway"><span>已使用</span></li>
+					<li class="Completed"><span>已过期</span></li>
+				</ul>
+			</div>
+			<div class="kongdiv-2">&nbsp</div>
+			<div class="indentcontent">
+				<div class="obligation-">123</div>
+				<div class="underway-">456</div>
+				<div class="Completed-">789</div>
+			</div>
+		</section>
 		
 		<footer>
 			<ul class="foot-ul">
-				
-					<li><a><i class="home-page"></i><span style="color: rgb(231,65,68);">首页</span></a></li>
+					<li><a><i class="home-page"></i><span>首页</span></a></li>
 					<li><a><i class="classify"></i><span>分类</span></a></li>
 					<li><a><i class="shopping-cart"></i><span>购物车</span></a></li>
-					<li><a><i class="logo-in"></i><span>登录</span></a></li>
+					<li><a><i class="logo-in"></i><span style="color: #e74144;">个人中心</span></a></li>
 				
 			</ul>
 		</footer>
