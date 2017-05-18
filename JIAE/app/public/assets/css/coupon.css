@@ -34,7 +34,7 @@ footer {
 }
 
 .home-page {
-	color: rgb(231, 65, 68);
+	color: #666;
 	width: 24px;
 	height: 24px;
 	margin: 4px auto 0;
@@ -42,7 +42,7 @@ footer {
 	line-height: 24px;
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-fill-color: transparent;
-	-webkit-text-stroke-color: rgb(231, 65, 68);
+	-webkit-text-stroke-color: #666;
 	font-style: normal;
 }
 
@@ -100,7 +100,7 @@ footer {
 }
 
 .logo-in {
-	color: #666;
+	color: rgb(231, 65, 68);
 	width: 24px;
 	height: 24px;
 	margin: 4px auto 0;
@@ -108,7 +108,7 @@ footer {
 	line-height: 24px;
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-fill-color: transparent;
-	-webkit-text-stroke-color: #666;
+	-webkit-text-stroke-color: rgb(231, 65, 68);
 	font-style: normal;
 }
 
@@ -154,7 +154,7 @@ section>div{
 }
 .obligation>span{
 	/*background: #E25A5B;*/
-	color: #e74144;;
+	color: #e74144;
 }
 .indentcontent{
 	position: relative;
@@ -181,7 +181,7 @@ section>div{
 	display: none;
 	width: 100%;
 }
-/*.foot-ul>li>a>.logo-in*/
+
 
 
 
