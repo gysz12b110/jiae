@@ -10,13 +10,15 @@
 		<!--<link rel="stylesheet" href="plugins/layui/css/layui.css" media="all" />
 		<link rel="stylesheet" href="css/global.css" media="all">-->
 		<link rel="stylesheet" href="css/button.css" />
+		<link rel="stylesheet" href="css/button.css" />
+		<link rel="stylesheet" href="css/reset.css" />
 		<link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.css" />
 		<link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css" />
 		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
 		<script type="text/javascript" src="js/angular1.5.8.js"></script>
 		<script type="text/javascript" src='js/goodstype.js'></script>
 		<style>
-			td>input{
+			td>input {
 				border: 0px;
 			}
 		</style>
@@ -55,17 +57,49 @@
 							<td><input ng-model="goods.name"> </td>
 							<td class="addbtn" style="margin-top: 0px;">
 								<span class="fa fa-file  savegoods"></span>
-								<span class="fa fa-pencil-square-o  updategoods"></span>
 								<span class="fa fa-trash  delgoods"></span>
-								
+
 							</td>
 						</tr>
 					</tbody>
-				</table>
+
+					<table>
+
+						<tr class="oneTr">
+							<td style="width: 60px; height: 40px;"><input type="checkbox" name="goods" value="全选">全选</td>
+
+							<td style="width: 60px; height: 40px;">ID</td>
+							<td>商品图片</td>
+							<td style="width:350px; height: 40px;">商品名称</td>
+							<td style="width: 100px; height: 40px;">数量</td>
+							<td style="width: 250px; height: 40px;">操作</td>
+
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="goods" value="全选"></td>
+
+					</table>
 			</fieldset>
 		</div>
-
+		<div class="mark"></div>
+		<div class="addtab">
+			<div class="">
+				<h2>添加商品</h2>
+				<span class="del">x</span>
+			</div>
+			<div class="content">
+				<form>
+					<div>
+						<label>商品类型：</label>
+						<input type="text" placeholder="请输入名称" />
+					</div>
+					
+					<button>提交</button>
+				</form>
+			</div>
+		</div>
 		<!--<script type="text/javascript" src="plugins/layui/layui.js"></script>-->
 	</body>
+	<script src="js/button.js"></script>
 
 </html>
