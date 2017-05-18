@@ -33,7 +33,7 @@
 		<link rel="stylesheet" href="../assets/css/home.css">
 		<script src="../assets/js/jquery203.js"></script>
 		<script src="../assets/js/amazeui.min.js"></script>
-		<!--<script src="../assets/js/jquery.lazyload.js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="../assets/js/jquery.lazyload.js" type="text/javascript" charset="utf-8"></script>
 		<!--<script src="../assets/js/main.js"></script>-->
 	</head>
 
@@ -495,7 +495,7 @@
 							<a href="javascript:;" class="ggds" data-id="">
 								<div class="productImg">
 									<!--lazy懒加载 // data-original懒加载必须有-->
-									<img class="tm-circle lazy" data-original="../assets/image/product/不锈钢电热水壶.jpgg" src="../assets/image/product/不锈钢电热水壶.jpg" alt="" style="display: block;">
+									<img class="tm-circle lazy" data-original="../assets/image/product/不锈钢电热水壶.jpg" src="../assets/image/product/不锈钢电热水壶.jpg" alt="" style="display: block;">
 								</div>
 							</a>
 							<a href="##" class="am-icon-btn am-icon-shopping-cart productShopping am-icon-sm j-btn-catalog"></a>
@@ -787,12 +787,13 @@
 				location.href = "/views/brand_area.html";
 			})
 			//图片懒加载
-			$(function(){
+			// $(function(){
 				$("img.lazy").lazyload({
-			
-					   load:$(this).css('opacity', 0).animate({'opacity':1},1500)
-				})
-				});
+					   load:function() { 
+							$(this).css('opacity', 0).animate({'opacity':1},1500);
+						}
+					 });
+				// });
 			//购物车遮罩层
 			$('#sure').click(function(){
 		           $('#zzc').hide();
