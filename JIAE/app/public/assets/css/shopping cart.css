@@ -84,3 +84,28 @@ header{
 
  
     }
+    .Empty-shopcart{
+        width:100%;
+        /*display:none;*/
+    }
+    .Settlement-shopcart{
+        width:100%;
+        height:40px;
+        position:fixed;
+        bottom:0px;
+        left:0px;
+        background:#000000;
+        display: none;
+    }
+    .Settlement-shopcart span{
+        color:#ccc;
+     }
+    .Settlement{
+        width:25%;
+        color:#fff;
+        height:40px;
+        line-height: 40px;
+        float:right;
+        background:#e25a5b;
+        text-align: center;
+    }
