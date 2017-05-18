@@ -15,23 +15,23 @@
     box-sizing: border-box;
 }
 
+.am-header-nav div a {
+    color: white;
+}
+
 div:nth-child(1) {
     -webkit-flex: 1;
     flex: 1;
-    color: white;
 }
 
 div:nth-child(2) {
     -webkit-flex: 2;
     flex: 2;
-    color: white;
-
 }
 
 div:nth-child(3) {
     -webkit-flex: 1;
     flex: 1;
-    color: white;
 }
 
 form {
@@ -45,11 +45,13 @@ form {
     margin-bottom: 0;
     box-sizing: border-box;
 }
+
 .am-u-sm-offset-1 {
     margin-top: 10%;
     margin-right: 10%;
     width: 80%;
 }
+
 .am-u-sm-offset-1 input {
     width: 100%;
     margin-bottom: 3.5%;
@@ -104,6 +106,7 @@ form {
 .am-icon-lock:before {
     content: "\f023";
 }
+
 .am-form-field {
     display: block;
     width: 100%;
@@ -129,10 +132,15 @@ form {
     max-width: 100%;
     height: auto;
 }
+
 .am-u-sm-4 {
     margin-top: 2%;
     color: white;
     background: #e25a5b !important;
+}
+
+.am-u-sm-4 a {
+    color: white;
 }
 
 .fast-login {
@@ -150,6 +158,8 @@ form {
 }
 
 .login-lists a {
+    width: 100px;
+    height: 100px;
     color: white;
 }
 

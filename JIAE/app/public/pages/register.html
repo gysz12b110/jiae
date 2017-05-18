@@ -12,23 +12,23 @@ minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
 </head>
 <body>
 <header class="am-header-nav">
-    <div href="#">&lt;</div>
-    <div href="#">注册</div>
-    <div href="#">登录</div>
+    <div><a href="#">&lt;</a></div>
+    <div><a href="#">注册</a></div>
+    <div><a href="loginPage">登录</a></div>
 </header>
-<form action="">
+<form action="register" method="post" onsubmit="return xx()">
     <div class="am-form-group">
-        <div class="am-u-sm-offset-1 am-u-sm-offset-2 "><input type="text" class="am-form-field" placeholder="请输入手机或邮箱">
+        <div class="am-u-sm-offset-1 am-u-sm-offset-2 "><input id="email" type="text" class="am-form-field" name="mobile" placeholder="请输入手机或邮箱">
         </div>
     </div>
     <div class="am-form-group">
-        <div class="am-u-sm-offset-1"><input type="text" class="am-form-field" placeholder="请输入密码"></div>
+        <div class="am-u-sm-offset-1"><input id="password" type="password" class="am-form-field" name="pass" placeholder="请输入密码"></div>
     </div>
     <div class="am-form-group">
-        <div class="am-u-sm-offset-1"><input type="text" class="am-form-field" placeholder="请再次输入密码"></div>
+        <div class="am-u-sm-offset-1"><input type="password" class="am-form-field" placeholder="请再次输入密码"></div>
     </div>
     <div class="am-form-group ">
-        <div class="am-u-sm-offset-1 am-u-sm-5"><input type="text" class="am-form-field" placeholder="请输入验证码"></div>
+        <div class="am-u-sm-offset-1 am-u-sm-5"><input type="text" class="am-form-field" placeholder="请 输入验证码"></div>
         <div class="form-img"><img src="../assets/image/yanzheng/yanzm1.jpg" alt=""></div>
     </div>
     <div class="am-u-sm-offset-3 "><input type="checkbox"><a href="#">阅读并同意</a><a>《加意用户注册协议》</a></div>
@@ -41,7 +41,7 @@ minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
 </form>
 <div class="am-form-group fast-login">
     <p class="desc">使用其它账号登录</p>
-    <div class="login-lists"><a href="#" class="am-icon-qq"></a></div>
+    <div class="login-lists"><a href="QQlogin.html" class="am-icon-qq"></a></div>
 </div>
 <!--底部-->
 <div class="am-navbar">
@@ -56,5 +56,26 @@ minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
     </ul>
 </div>
 </body>
-
+<script>
+    var email=document.getElementById("email");
+    var password=document.getElementById("password");
+    var pat = /^[a-zA-Z0-9]+\w+@[a-zA-Z0-9]+.\w+$/;
+    var pat2=/^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\\d{8}$/;
+    var pw=/^[a-zA-Z]\w{5,11}$/;
+//    email.onblur=function(e) {
+//        if (!pat.test(email.value)) {
+//            alert("请正确填写电话号码");
+//        }
+//    };
+//    email.onblur=function(e) {
+//        if (!pat2.test(email.value)) {
+//            alert("非法邮件地址");
+//        }
+//    }
+//    password.onblur=function(e) {
+//        if (!pw.test(password.value)) {
+//            alert("请填写以字母开头6到12位密码");
+//        }
+//    }
+</script>
 </html>
