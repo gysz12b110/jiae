@@ -11,6 +11,7 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="format-detection" content="telephone=no">
          <link rel="stylesheet" href="css/button.css"/>
+         <link rel="stylesheet" href="css/reset.css" />
 		<link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.css" />
 		<link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css" />
 		<!--<link rel="stylesheet" href="plugins/layui/css/layui.css" media="all" />
@@ -21,7 +22,7 @@
 	<body>
         		<div>
 			<fieldset>
-				<legend class="goods">商品信息管理</legend>
+				<legend class="goods">商品类型管理</legend>
 				<div id="top">
 					<div>
 						<button class="add addOne"><i class="fa fa-plus-square icon"></i>新增</button>
@@ -36,23 +37,22 @@
 					</div>
 				</div>
 				<table>
-					
 					<tr class="oneTr">
 						<td style="width: 60px; height: 40px;"><input type="checkbox" name="goods" value="全选">全选</td>
-						<td style="width: 60px; height: 40px;">排序</td>
+						
 						<td style="width: 60px; height: 40px;">ID</td>
 						<td>商品图片</td>
 						<td style="width:350px; height: 40px;">商品名称</td>
 						<td style="width: 100px; height: 40px;">数量</td>
-						<td style="width: 150px; height: 40px;">操作</td>
+						<td style="width: 250px; height: 40px;">操作</td>
 						
 					</tr>
 					<tr>
 						<td><input type="checkbox" name="goods" value="全选"></td>
-						<td><input type="text" placeholder="" style="width: 40px;"/></td>
+						
 						<td>1</td>
 						<td><img src="images/l111.jpg"/></td>
-						<td>竹语 七夕系列情侣伞</td>
+						<td class="inputZhu"><p contenteditable="true" class="inputZhu"/>竹语，七夕系列情侣伞</p></td>
 						<td>￥249.00</td>
 						<td class="addbtn">
 							<span class="fa fa-file" style="display: inline-block;"></span>
@@ -63,10 +63,10 @@
 					</tr>
 					<tr>
 						<td><input type="checkbox" name="goods" value="全选"></td>
-						<td><input type="text" placeholder="" style="width: 40px;"/></td>
+						
 						<td>2</td>
 						<td><img src="images/l111.jpg"/></td>
-						<td>竹语 景点系列伞</td>
+						<td><p contenteditable="true" class="inputZhu"/>竹语，七夕系列情侣伞</p></td>
 						<td>￥249.00</td>
 						<td class="addbtn">
 							<span class="fa fa-file" style="display: inline-block;"></span>
@@ -77,10 +77,10 @@
 					</tr>
 					<tr>
 						<td><input type="checkbox" name="goods" value="全选"></td>
-						<td><input type="text" placeholder="" style="width: 40px;"/></td>
+						
 						<td>1</td>
 						<td><img src="images/l111.jpg"/></td>
-						<td>竹语 素色系列情侣伞</td>
+						<td><p contenteditable="true" class="inputZhu"/>竹语，七夕系列情侣伞</p></td>
 						<td>￥249.00</td>
 						<td class="addbtn">
 							<span class="fa fa-file" style="display: inline-block;"></span>

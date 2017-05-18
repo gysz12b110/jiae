@@ -35,11 +35,12 @@
 
 table{
 	border-collapse: collapse;
-	margin-left: 80px;
+	width: 1100px;
 }
 table,tr,td{
 	border: 1px dashed #ccc;
 	text-align: center;
+	
 }
 img{
 	width: 120px;
@@ -69,12 +70,22 @@ img{
 	
 	/*height: 30px;*/
 	margin-top: -30px;
-	margin-left: 600px;
+	margin-left: 750px;
 }
 .inp{
 	width:200px;
-	height: 30px;
+	height: 36px;
 	
+}
+.inputZhu{
+	width: 300px;
+	height: 100px;
+	border: none;
+	outline: none;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: block;
 }
 .right button{
 	height:36px;
