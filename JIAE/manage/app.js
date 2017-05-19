@@ -29,7 +29,6 @@ app.get("/", function(req, res) {
 
 //用户路由
 userRoutes(app, urlParser, tools,pools);
-goodsRoutes(app, urlParser, tools,pools);
 app.listen(9000);
 console.log("server start in 9000");
 
@@ -37,12 +36,10 @@ console.log("server start in 9000");
 
 //角色管理
 roleRoutes(app, urlParser, tools,pools);
-app.listen(9000);
 console.log("server start in 9000");
 
 //商品类管理
 goodsRoutes(app, urlParser, tools,pools);
-app.listen(9000);
 console.log("server start in 9000");
 
 
