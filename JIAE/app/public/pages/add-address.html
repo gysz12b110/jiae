@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+	<head>
+		<meta charset="UTF-8">
+		<title>新增地址</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+		<script type="text/javascript" src="../assets/js/jquery-2.1.0.js"></script>
+		<script src="../assets/js/jquery203.js"></script>
+		<script type="text/javascript" src="../assets/js/add-address.js"></script>
+		<link rel="stylesheet" type="text/css" href="../assets/css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../assets/css/add-address.css"/>
+		<link rel="stylesheet" href="../assets/css/amazeui.min.css">
+		<link rel="stylesheet" href="../assets/css/app.css">
+		<link rel="stylesheet" href="../assets/css/public.css">
+		<link rel="stylesheet" href="../assets/css/home.css">
+		
+		<script src="../assets/js/amazeui.min.js"></script>
+		<script src="../assets/js/jquery.lazyload.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../assets/js/angular1.5.8.js" ></script>
+		<style type="text/css">
+			/*body{
+				max-width: 640px;
+			}*/
+			header{
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				background: #E25A5B;
+				display: -moz-box;
+				display: -webkit-box;
+				display: box;
+				
+			}
+			.return{
+				-webkit-box-flex: 1;
+				-moz-box-flex: 1;
+				box-flex:1;
+				color: white;
+				text-align: center;
+				font-size: 2rem;
+				line-height: 49px;
+			}
+			.return>a{
+				font-size: 2rem;
+				line-height: 49px;
+				display: block;
+				color: white;
+			}
+			.headertitle{
+				-webkit-box-flex: 2;
+				-moz-box-flex: 2;
+				box-flex:2;
+				color: white;
+				text-align: center;
+				font-size: 2rem;
+				line-height: 49px;
+				font-family: "微软雅黑";
+			}
+			.fit{
+				-webkit-box-flex: 1;
+				-moz-box-flex: 1;
+				box-flex:1;
+				color: white;
+				text-align: center;
+				font-size: 2rem;
+				line-height: 49px;
+			}
+			.fit:before{
+				content: "\f0c7";
+			}
+			.fita{
+				display: block;
+			}
+			.kongdiv {
+				line-height: 49px;
+			}
+		</style>
+	</head>
+	<body ng-controller="myctrl">
+		<header>
+			<div class="return"><a href="index.html">&lt;</a></div>
+			<div class="headertitle">我的地址</div>
+			<div class="fit"><a href="#" class="fita"></a></div>
+		</header>
+		<div class="kongdiv">&nbsp;</div>
+		<section>
+			<div class="addressee">
+				<span>收件人姓名</span><br/>
+				<input type="text" /><br/>
+				<span>手机号码</span><br/>
+				<input type="text" />
+			</div>
+			
+			
+			<div class="areas">
+				<div>省:&nbsp;&nbsp;<select ng-model="selectedProvince" ng-options="x for x in provinces"></select></div>
+				<div>市:&nbsp;&nbsp;<select ng-model="selectedCity" ng-options="x for x in citys"></select></div>
+				<div>区:&nbsp;&nbsp;<select ng-model="selectedArea" ng-options="x for x in areas"></select></div>
+			</div>
+			
+			
+			<div class="addresseeinfo">
+				<span>街道地址</span><br/>
+				<textarea></textarea><br/>
+				<span>邮编</span><br/>
+				<input type="text" />
+			</div>
+			
+			<input class="save" type="button" value="保存" />
+		</section>
+		
+		<footer>
+			<ul class="foot-ul">
+				<li><a><i class="home-page"></i><span>首页</span></a></li>
+				<li><a><i class="classify"></i><span>分类</span></a></li>
+				<li><a><i class="shopping-cart"></i><span>购物车</span></a></li>
+				<li><a><i class="logo-in"></i><span style="color: rgb(231,65,68);">个人中心</span></a></li>
+			</ul>
+		</footer>
+	</body>
+	<script type="text/javascript" src="../assets/js/add-address.js" ></script>
+	<script type="text/javascript">
+			angular.module("myapp",[]).controller("myctrl",function($scope){
+			$scope.provinces=province;
+			$scope.changeCity=function(){
+				$scope.citys=shi[$scope.selectedProvince];
+			}
+			$scope.changeArea=function(){
+				$scope.areas=qu[$scope.selectedCity];
+			}
+			$scope.$watch("selectedProvince",$scope.changeCity,true);
+			$scope.$watch("selectedCity",$scope.changeArea,true);
+		})
+	</script>
+</html>
