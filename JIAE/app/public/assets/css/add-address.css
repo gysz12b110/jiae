@@ -35,7 +35,7 @@ footer {
 }
 
 .home-page {
-	color: rgb(231, 65, 68);
+	color: #666;
 	width: 24px;
 	height: 24px;
 	margin: 4px auto 0;
@@ -43,7 +43,7 @@ footer {
 	line-height: 24px;
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-fill-color: transparent;
-	-webkit-text-stroke-color: rgb(231, 65, 68);
+	-webkit-text-stroke-color: #666;
 	font-style: normal;
 }
 
@@ -101,7 +101,7 @@ footer {
 }
 
 .logo-in {
-	color: #666;
+	color: rgb(231, 65, 68);
 	width: 24px;
 	height: 24px;
 	margin: 4px auto 0;
@@ -109,7 +109,7 @@ footer {
 	line-height: 24px;
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-fill-color: transparent;
-	-webkit-text-stroke-color: #666;
+	-webkit-text-stroke-color: rgb(231, 65, 68);
 	font-style: normal;
 }
 
@@ -121,3 +121,202 @@ footer {
 	font-size: 22px;
 	vertical-align: middle;
 }
+section{
+	width: 95%;
+	margin: 0 auto;
+	/*background: skyblue;*/
+	
+}
+section>div{
+	width: 100%;
+}
+.addressee{
+	margin-top: 7%;
+}
+.addressee>span{
+	color: #999999;
+	font-size: 1.3rem;
+}
+.addressee>input{
+	width: 99%;
+	line-height: 2rem;
+	border: 1px solid #999;
+	/*outline: none;*/
+}
+.areas{
+	color: #999999;
+	font-size: 1.3rem;
+	margin-top: 8%;
+	width: 100%;
+}
+.areas>div{
+	width: 100%;
+	margin-top: 5%;
+	height: 2rem;
+}
+.areas>div>select{
+	height: 2rem;
+	width: 92%;
+}
+.addresseeinfo{
+	width: 100%;
+	color: #999999;
+	font-size: 1.3rem;
+	margin-top: 10%;
+}
+.addresseeinfo>textarea{
+	width: 100%;
+	border: 1px solid #999;
+}
+.addresseeinfo>input{
+	width: 100%;
+	border: 1px solid #999;
+	line-height: 2rem;
+}
+.save{
+	background: #e25a5b;
+	color: #fff;
+	text-align: center;
+	margin-top: 15%;
+	width: 100%;
+	outline: none;
+	border: none;
+	line-height: 2.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
