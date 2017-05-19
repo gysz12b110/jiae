@@ -8,6 +8,8 @@ var userRoutes = require("./server/controller/userController");
 
 var goodsRoutes = require("./server/controller/goodsController");
 
+//var goodslistRoutes = require("./server/controller/goodslistRoutes");
+
 var roleRoutes = require("./server/controller/roleController");
 
 var MessageXSend = require('./server/sms/messageXSend.js');
@@ -30,16 +32,17 @@ app.get("/", function(req, res) {
 //用户路由
 userRoutes(app, urlParser, tools,pools);
 app.listen(9000);
-console.log("server start in 9000");
 
 
 
 //角色管理
 roleRoutes(app, urlParser, tools,pools);
-console.log("server start in 9000");
 
 //商品类管理
 goodsRoutes(app, urlParser, tools,pools);
 console.log("server start in 9000");
 
+//商品管理
+//goodslistRoutes(app, urlParser, tools,pools);
+//console.log("server start in 9000");
 
