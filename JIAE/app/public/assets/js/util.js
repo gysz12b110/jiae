@@ -32,7 +32,11 @@ function openConfirm(title, msg, surecallback, cancelCallback){
 	  });
 }
 
+// HEAD
+//数组删除
 
+
+// a959f6b980dfd09fa26c1977d3a4d3d9faf397c7
 Array.prototype.remove=function(dx) 
 {
     if(isNaN(dx)||dx>this.length){return false;} 
@@ -57,7 +61,11 @@ $(function(){
 	});
 });
 
+// <<<<<<< HEAD
+/* 商品列表页加入购物  start */
+// =======
 
+// >>>>>>> a959f6b980dfd09fa26c1977d3a4d3d9faf397c7
 function addCart() {
 	var btn = $(".j-btn-catalog");
 	btn.each(function(){
@@ -74,9 +82,19 @@ function addCart() {
         }).done(function(e) {
         	$("#J-cart-num").text(e.quantity),
         	e.quantity == 0?$("#J-cart-num").css("display", "none"): $("#J-cart-num").css("display", "block"),
-        	openAlert("鍔犲叆璐墿杞︽垚鍔燂紒");
+// HEAD
+        	openAlert("加入购物车成功！");
         }).fail(function(e) {
-        	openAlert("鍔犲叆璐墿杞﹀け璐ワ紒");
+        	openAlert("加入购物车失败！");
         });
 	}
 }
+/* 商品列表页加入购物  end */
+// =======
+        // 	openAlert("鍔犲叆璐墿杞︽垚鍔燂紒");
+        // $(this).fail(function(e) {
+        // 	openAlert("鍔犲叆璐墿杞﹀け璐ワ紒");
+        // });
+// 	}
+// }
+// >>>>>>> a959f6b980dfd09fa26c1977d3a4d3d9faf397c7

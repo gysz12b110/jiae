@@ -145,7 +145,7 @@ li {
 
 </head>
 <!--[if (gte IE 9)|!(IE)]><!-->
-<script src="../assets/js/jquery.m.js"></script>
+<!--<script src="../assets/js/jquery.m.js"></script>-->
 <!--<![endif]-->
 <script src="../assets/js/jquery203.js"></script>
 <script src="../assets/js/handlebars.min.js"></script>
@@ -168,13 +168,12 @@ li {
 	}
 
   </script>
-  <!--<script src="../assets/js/hmttongji.js"></script>-->
-  <!--<script src="../assets/js/bgnmtongji.js"></script>-->
+  
 	<script src="../assets/js/search.js"></script>
 	<!-- 在catalog页面 -->
 	<script type="text/javascript">
 		$(function(){
-			changeTitleClass('catalog');
+			// changeTitleClass('catalog');
 		});
 	</script>
 	<script type="text/javascript">
@@ -204,7 +203,7 @@ li {
 		var html = template('Catalog-template', data);
 		$("#secondCatalog_"+id).html(html);
 	}
-	var changeCatalog=function (catalogId){
+	function changeCatalog(catalogId){
 		$zeModal.modal();
 		var postmsg = {
 				'catalogId' : catalogId

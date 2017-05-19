@@ -1,46 +1,74 @@
+ /*头部背景颜色*/
+  .am-header-default{
+    background-color: #e25a5b;
+  }
+  /*头部文字*/
+  .am-header-text{
+  	font-size: 1.4rem;
+  }
+  /*间距背景*/
+  .am-between-bg{
+  	background-color: #F9F9F9;
+  	height: 0.6rem;
+  }
+/*图片圆角*/
+.am-radius-pic{
+	border-radius: 20px;
+}
+/*图片框div设置内边距*/
+.am-gallery-item{
+	padding: 0.6rem;
+}
+/*商品名称*/
+.center{
+	padding-top: 5px;
+	font-size: 0.3rem;
+	color: #b0b0b0;
+	text-align: center;
+}
+/*h3*/
+.des1{
+	font-weight: 300;
+	color: #333333;
+	display: inline-block;
+	clear: right;
+	margin-top: 0.2rem;
+}
+.des2{
+	font-weight: 200;
+	display: inline-block;
+	margin-top: 0.2rem;
+}
+.price{
+	font-size: 0.9rem;
+	font-weight: 300;
+	color: #E74143;
+	text-align: center;
+	margin-top: 0.4rem;
+	margin-bottom: 0.4rem;
+}
+.divider{
+	border-right: solid 1px #f1f1f1;
+	padding: 0px;
+	margin: 0px;
+}
+ /*头部背景颜色*/
+  .am-header-default{
+    background-color: #e25a5b;
+  }
+ .am-header-fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 1010;
+}
+.secondli img {
+	display: block;
+	margin: auto;
+	background: none;
+	width:60px;
+	height:60px;
+}
 
-.footerTitleMiao{-webkit-text-stroke-width:1px;-webkit-text-fill-color:transparent;-webkit-text-stroke-color:rgb(102,102,102)}
-.footerTitleFont{color:#666666}
-.footerTitleMiaoActive{-webkit-text-stroke-width:1px;-webkit-text-fill-color:transparent;-webkit-text-stroke-color:rgb(231,65,68)}
-.footerTitleFontActive{color:#e74144}
-
-.am-header-fixed {position: fixed;top: 0;left: 0;right: 0;width: 100%;z-index: 1010;}
-.j-my-cog i {-webkit-text-stroke: 1px #fff;-moz-text-stroke: 1px #fff; color: transparent;}
-/* .am-header .am-header-nav{top:15px;} */
-.productShopping {
-    background-color: rgba(186,186,186,0.5);
-    position: absolute;
-    bottom: 30%;
-    right: 5%;
-    color: #f0f1f0;
-    width: 30px;
-    height: 30px;
-    font-size: 14px;
-    line-height: 30px;
-}
-.am-icon-sm:before {
-    padding-top: 3px;
-}
-.lazy {
- margin: 0px auto;
- width:50px;height:50px;
- /*background: url(../image/loading.gif) no-repeat center center;*/
-}
-
-
-.am-popover {
-    border-radius: 5px!important;
-    background: #f8f8f8!important;
-    border: 1px solid #dedede!important;
-}
-.am-popover-inner {
-    background: #fefefe!important;
-    padding: 2px!important;
-    border-radius: 5px!important;
-}
-.am-popover-caret {
-    border-bottom: 4px solid #dedede!important;
-}
-.am-popover {color:#ccc;}
-.am-popover-top .am-popover-caret {bottom: -4px;}
-.am-popover-sm {font-size: 1rem!important;}
