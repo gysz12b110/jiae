@@ -168,7 +168,7 @@ li {
 	}
 
   </script>
-  <!--<script src="../assets/js/hmttongji.js"></script>-->
+  <script src="../assets/js/hmttongji.js"></script>
   <!--<script src="../assets/js/bgnmtongji.js"></script>-->
 	<script src="../assets/js/search.js"></script>
 	<!-- 在catalog页面 -->
@@ -179,6 +179,7 @@ li {
 	</script>
 	<script type="text/javascript">
 	$(function(){ 	
+		var changeCatalog;
 		var nowCataId = '2', nowLi = "", firstCatalogLiArray = [];
 		var $firstcatalogli = $("#firstCatalog li");
 		$firstcatalogli.each(function(){
@@ -204,41 +205,41 @@ li {
 		var html = template('Catalog-template', data);
 		$("#secondCatalog_"+id).html(html);
 	}
-	var changeCatalog=function (catalogId){
+	function changeCatalog(catalogId){
 		$zeModal.modal();
 		var postmsg = {
 				'catalogId' : catalogId
 			};
-		// $.ajax({
-		// 	beforeSend : function(xhr) {
-		// 		xhr.setRequestHeader('X-CSRFToken', $("input[name='csrfmiddlewaretoken']").val());
-		// 	},
-		// 	url : "changeCatalog/",
-		// 	data : postmsg,
-		// 	type : "post",
-		// }).done(function(msg) {
-		// 	if (msg.status == 0) {
-		// 		var title = msg.title;
-		// 		var imageUrl=msg.imageUrl;
-		// 		var catas = new Array(),cata;
-		// 		$.each(msg.secondCatalog,function(i,val){
-		// 			cata = {
-		// 					'catalogId':val.catalogId,	
-		// 					'catalogName':val.catalogName,
-		// 					'title':val.title,
-		// 					'imageUrl':val.logoUrl
-		// 				}
-		// 				catas.push(cata);
-		// 		});
-		// 		initData(msg.catalog.catalogId,title,imageUrl,catas, msg.catalog.targetUrl);
-		// 	}
-		// 	if (msg.status == 1) {
-		// 	}
-		// 	$zeModal.modal('close');
-		// }).fail(function(jqXHR, textStatus) {
-		// 	$zeModal.modal('close');
-		// 	// console.log("error");
-		// });
+		$.ajax({
+			beforeSend : function(xhr) {
+				xhr.setRequestHeader('X-CSRFToken', $("input[name='csrfmiddlewaretoken']").val());
+			},
+			url : "changeCatalog/",
+			data : postmsg,
+			type : "post",
+		}).done(function(msg) {
+			if (msg.status == 0) {
+				var title = msg.title;
+				var imageUrl=msg.imageUrl;
+				var catas = new Array(),cata;
+				$.each(msg.secondCatalog,function(i,val){
+					cata = {
+							'catalogId':val.catalogId,	
+							'catalogName':val.catalogName,
+							'title':val.title,
+							'imageUrl':val.logoUrl
+						}
+						catas.push(cata);
+				});
+				initData(msg.catalog.catalogId,title,imageUrl,catas, msg.catalog.targetUrl);
+			}
+			if (msg.status == 1) {
+			}
+			$zeModal.modal('close');
+		}).fail(function(jqXHR, textStatus) {
+			$zeModal.modal('close');
+			// console.log("error");
+		});
 	}
 	</script>
 	
