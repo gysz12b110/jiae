@@ -614,13 +614,25 @@ textarea {
     color:white;
     bottom:50px;
 }
-.addtxt {
+/*.addtxt {
     font-size: 1.4rem;
     padding-top: 1.2rem;
     color: #fff;
     height: 46px;
     text-align: center;
     margin-top: 0rem;
+    font-weight: bold;
+}*/
+.addtxt {
+    font-size: 1.4rem;
+    font-weight: 200;
+    padding-top: 1.2rem;
+    color: #fff;
+    width: 22%;
+    height: 46px;
+    text-align: center;
+    margin-top: -.4rem;
+    background-color: #e25a5b;
     font-weight: bold;
 }
 .j-sellout {
@@ -638,6 +650,24 @@ textarea {
     margin-top:-35px;
     padding-right: .5rem;
     /*position:absolute;*/
+}
+
+.gwc{
+    /*margin-left: 14.9rem;*/
+     position: fixed;
+    bottom:51px;
+    right:70px;
+    width:71.4px;
+}
+
+
+
+.j-buy-btn {
+    background: rgb(254, 148, 2);
+   position: fixed;
+    bottom:51px;
+    right:.1rem;
+    width:69.4px;
 }
 
 
