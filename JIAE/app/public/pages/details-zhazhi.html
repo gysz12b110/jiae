@@ -16,6 +16,7 @@
 		<link rel="stylesheet" href="../assets/css/reset.css"/>
 		<script src="../assets/js/jquery203.js"></script>
 		<script src="../assets/js/modernizr.custom.js"></script>
+		<script src="../assets/js/jquery.touchSwipe.min.js"></script>
 	</head>
 	<body>
 		<!--头部-->
@@ -37,10 +38,10 @@
 		<!--头部-->
 		<div class="container rowDiv">
 		<div class="details">
-			<img class="img-responsive center-block j-item-gallery-big selected" style="width: 100%; height: 591px;" src="../assets/image/shoping-img/l4/4/l443.jpg" alt="迷你便携电动榨汁机">
-			<img class="img-responsive center-block j-item-gallery-one" style="width: 100%; height: 591px;" src="../assets/image/shoping-img/l4/4/l442.jpg" alt="迷你便携电动榨汁机">
-			<img class="img-responsive center-block j-item-gallery-two" style="width: 100%; height: 591px;" src="../assets/image/shoping-img/l4/4/l444.jpg" alt="迷你便携电动榨汁机">
-			<img class="img-responsive center-block j-item-gallery-three" style="width: 100%; height: 591px;" src="../assets/image/shoping-img/l4/4/l445.jpg" alt="迷你便携电动榨汁机">
+			<img class="img-responsive center-block j-item-gallery-big selected" style="width: 100%;" src="../assets/image/shoping-img/l4/4/l443.jpg" alt="迷你便携电动榨汁机">
+			<img class="img-responsive center-block j-item-gallery-one" style="width: 100%;" src="../assets/image/shoping-img/l4/4/l442.jpg" alt="迷你便携电动榨汁机">
+			<img class="img-responsive center-block j-item-gallery-two" style="width: 100%;" src="../assets/image/shoping-img/l4/4/l444.jpg" alt="迷你便携电动榨汁机">
+			<img class="img-responsive center-block j-item-gallery-three" style="width: 100%;" src="../assets/image/shoping-img/l4/4/l445.jpg" alt="迷你便携电动榨汁机">
 		</div>
 		<input type="hidden" class="j-param-productId" value="1012565"> 
 		<input type="hidden" class="j-externalVipType" value="">
@@ -63,20 +64,21 @@
 				<span class=" fa fa-share-alt-square share-icon"></span>
 				<span class="share-fx">分享</span>
 			</div>
-			<div class="share-fxhid share-ul">
-				<ul>
-					<li class="weibo"><p>新浪微博</p></li>
-					<li class="wetcat"><p>微信</p></li>
-					<li class="tengxun"><p>腾讯微博</p></li>
-					<li class="qq"><p>QQ空间</p></li>
-					<li class="qqfriend"><p>QQ好友</p></li>
-					<li class="douban"><p>豆瓣</p></li>
-					<li class="people"><p>人人网</p></li>
+			
+			
+            <div class="-mob-share-ui box_163css -mob-share-ui-theme -mob-share-ui-theme-slide-bottom -mob-share-initialized" style="display: block; visibility: inherit; bottom: -180px; transition-property: all; transition-duration: 0s; transform: translate(0px, 0px);">
+				<ul class="-mob-share-list line" style="transition-property: all; transition-duration: 0s; left: 0px;">
+					<li class="weibo -mob-share-initialized"><p>新浪微博</p></li>
+					<li class="wetcat -mob-share-initialized"><p>微信</p></li>
+					<li class="tengxun -mob-share-initialized"><p>腾讯微博</p></li>
+					<li class="qq -mob-share-initialized"><p>QQ空间</p></li>
+					<li class="qqfriend -mob-share-initialized"><p>QQ好友</p></li>
+					<li class="douban -mob-share-initialized"><p>豆瓣</p></li>
+					<li class="people -mob-share-initialized"><p>人人网</p></li>
 				</ul>
-				<div class="close">
-				     取消
-				</div>
+				<div class="-mob-share-close">取消</div>
 			</div>
+
 		</div>
 		
 		<!--属性分类-->
@@ -125,7 +127,7 @@
 				<!--分割块-->
 				<!--<div class="dividerbg"></div>-->
 				<div class="am-tab-panel am-active bd selected">
-					<div class="j-information">
+					<!--<div class="j-information">
 						<section class="am-accordion am-accordion-gapped am-no-layout">
 							<dl class="am-accordion-item am-active am-disabled">
 								<dt class="am-accordion-title title">
@@ -159,7 +161,7 @@
 							    </dd>
 							</dl>
 						</section>
-					</div>
+					</div>-->
 					<p>
 						<img src="../assets/image/shoping-img/l4/4/l44x1.jpg"/>
 					</p>
@@ -396,8 +398,108 @@
 		<div class="addtxt floatDiv j-buy-btn" id="buyBtn" data-id="" hrefstr="settleaccount?productItemId=1000032&amp;productId=100113" style="display: none;">立即购买</div>
 		<div class=" addtxt floatDiv j-sellout" id="J-sellout" style="display: block;">热卖脱销</div>
 	</div>
+
+	<!--底部-->
+		<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="">
+			<ul id="container" class="am-navbar-nav am-cf am-avg-sm-4" style="background-color:#fff;" id="J-footer-menu">
+				<li>
+					<a href="#" class="" id="home">
+						<span id="homeIcon" class="am-icon-home footerTitleMiao footerTitleMiaoActive headIcon"></span>
+						<span id="homeTitle" class="am-navbar-label footerTitleFont footerTitleFontActive headTitle">首页</span>
+					</a>
+				</li>
+				<li>
+					<a href="/views/catalog.html" class="" id="typelist">
+						<span id="typelistIcon" class="am-icon-bars footerTitleMiao headIcon"></span>
+						<span id="typelistTitle" class="am-navbar-label footerTitleFont headTitle">分类</span>
+					</a>
+				</li>
+				<li>
+					<a href="/views/shopcar.html" class="" id="cart">
+						<span id="cartIcon" class="am-icon-shopping-cart footerTitleMiao headIcon" style="position:relative;">
+                  <span class="am-badge am-badge-danger am-round" id="J-cart-num" 
+                  style="position: absolute;top: -.2rem;left: .8rem;color: #fff;border-radius: 1000px;-webkit-text-fill-color: #fff;-webkit-text-stroke-color: #fff;font-weight: 300;display:none;">
+                  0</span>
+						</span>
+						<span id="cartTitle" class="am-navbar-label footerTitleFont headTitle">购物车</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;" id="login">
+						<!-- <a id="J-hd-btn-login" href="login"> -->
+						<span id="loginIcon" class="am-icon-user footerTitleMiao headIcon"></span>
+						<span id="loginTitle" class="am-navbar-label footerTitleFont headTitle">登录</span>
+					</a>
+				</li>
+			</ul>
+		</div>
 	</body>
 </html>
 <script src="../assets/js/derails-zhazhi.js"></script>
 
 <script src="../assets/js/jquery.cbpContentSlider.min.js"></script>
+<script type="text/javascript">
+
+	$(function(){
+
+		n=$('.line li').size();				
+
+		var wh=100*n+"%";
+
+		$('.line').width(wh);
+
+		var lt=(100/n/4);
+
+		var lt_li=lt+"%";
+
+		$('.line li').width(lt_li);			
+
+		var y=0;
+
+		var w=n/2;						
+
+		$(".line").swipe( {					
+
+			swipeLeft:function() {
+
+				if(y==-lt*w){
+
+					alert('已经到最后页');
+
+				}else{
+
+					y=y-lt;								
+
+					var t=y+"%";									
+
+					$(this).css({'-webkit-transform':"translate("+t+")",'-webkit-transition':'500ms linear'} );	
+
+				}
+
+			},
+
+			swipeRight:function() {
+
+				if(y==0){
+
+					alert('已经到第一页')	
+
+				}else{
+
+					y=y+lt;
+
+					var t=y+"%";
+
+					$(this).css({'-webkit-transform':"translate("+t+")",'-webkit-transition':'500ms linear'} );	
+
+				}
+
+				
+
+			}
+
+		});
+
+	});						
+
+</script>

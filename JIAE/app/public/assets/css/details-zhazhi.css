@@ -1,3 +1,9 @@
+html {
+
+	overflow-y: scroll;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
 .clearboth{
     overflow: hidden;
     clear: both;
@@ -61,6 +67,7 @@ a, ins {
 }
 .details {
     background-color: #f9f9f9;
+    margin-top:30px;
 }
 .img-responsive{
     display: none;
@@ -122,7 +129,7 @@ a, ins {
     /*left: 0;*/
    margin-top:5rem;
    width:100%;
-   display: block;
+   /*display: block;*/
     visibility: inherit;
     bottom: 0px;
     transition-property: all;
@@ -133,7 +140,7 @@ a, ins {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: none;
+    /*display: none;*/
 }
 .share-fxhid ul{
     position: relative;
@@ -584,4 +591,140 @@ textarea {
 }
 .am-tabs-bd div.selected{
     display:block;
+}
+.foot {
+	width: 100%;
+	z-index: 999;
+	margin-left: 0rem;
+	height: 46px;
+	position: fixed;
+	position: absolute;
+	bottom: 0px;
+	bottom: 0px;
+	margin-bottom: 46px;
+	margin-top: expression(this.style.pixelHeight + document.documentElement.scrollTop)
+}  
+.leftdesc {
+    background-color: #000;
+    opacity: 0.8;
+    width: 56%;
+    display: inline-block;
+    height: 46px;  
+    position: fixed;  
+    color:white;
+    bottom:50px;
+}
+.addtxt {
+    font-size: 1.4rem;
+    padding-top: 1.2rem;
+    color: #fff;
+    height: 46px;
+    text-align: center;
+    margin-top: 0rem;
+    font-weight: bold;
+}
+.j-sellout {
+    width: 44%;
+    background: #ccc;
+    position: fixed;
+    bottom:50px;
+    right:0;
+}
+.priceadd {
+    float: right;
+    height: 4rem;
+    line-height: 1.6rem;
+    bottom: 40px;
+    margin-top:-35px;
+    padding-right: .5rem;
+    /*position:absolute;*/
+}
+
+
+
+.-mob-share-ui.-mob-share-ui-theme-slide-bottom ul.-mob-share-list {
+    position: relative;
+    padding: 1em 1em 0;
+    height: auto;
+    width: auto;
+    text-align: left;
+}
+
+.-mob-share-ui ul.-mob-share-list li {
+    display: inline-block;
+    zoom: 1;
+    list-style: none;
+    margin: 0 .4em 1.5em;
+    height: 83px;
+    width: 60px;
+    text-align: center;
+    cursor: pointer;
+    background-position-x: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.-mob-share-ui ul.-mob-share-list li p {
+    zoom: 1;
+    left: 0;
+    bottom: -1.5em;
+    z-index: 999999997;
+    margin: 0 auto;
+    line-height: 1em;
+    color: #5e5e5e;
+}
+.-mob-share-ui .-mob-share-close, .-mob-share-ui ul.-mob-share-list li p {
+    display: block;
+    position: absolute;
+    width: 100%;
+    font-size: .8em;
+    text-align: center;
+}
+
+.-mob-share-ui.-mob-share-ui-theme-slide-bottom {
+    background-color: #fff;
+    position: fixed;
+    height: auto;
+    text-align: center;
+    left: 0;
+    
+}
+.-mob-share-ui.-mob-share-ui-theme {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.-mob-share-ui {
+    margin: 0;
+    padding: 0;
+    
+    border-bottom: 1px solid #e9e9e9;
+    z-index: 999999999;
+    color: #333;
+    font-size: 16px;
+}
+.-mob-share-ui, .-mob-share-ui-bg {
+    
+    width: 100%;
+    
+}
+.-mob-share-ui.-mob-share-ui-theme-slide-bottom .-mob-share-close {
+    position: relative;
+}
+.-mob-share-ui .-mob-share-close {
+    clear: both;
+    bottom: 0;
+    z-index: 999999999;
+    height: 3em;
+    line-height: 3em;
+    background: #EFEFEF;
+    cursor: pointer;
+}
+.-mob-share-ui .-mob-share-close, .-mob-share-ui ul.-mob-share-list li p {
+    display: block;
+    
+    width: 100%;
+    font-size: .8em;
+    text-align: center;
 }
