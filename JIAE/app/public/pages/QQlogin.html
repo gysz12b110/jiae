@@ -8,6 +8,7 @@ minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
     <link rel="stylesheet" href="../assets/css/reset.css"/>
     <link rel="stylesheet" href="../assets/css/amazeui.min.css"/>
     <link rel="stylesheet" href="../assets/css/QQlogin.css">
+    <script src="../assets/js/jquery203.js"></script>
     <title>QQ登录</title>
 </head>
 <body>
@@ -17,13 +18,13 @@ minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
     <p class="billion-choice">亿万用户已选择QQ帐号登录应用</p>
 </header>
 <div class="input">
-    <input type="text" placeholder="QQ帐号/邮箱/手机号">
+    <input type="text" placeholder="QQ帐号/邮箱">
 </div>
 <div class="input">
     <input type="password" placeholder="QQ密码">
 </div>
 <div class="input inputs">
-    <button >QQ登录</button>
+    <button class="loand">QQ登录</button>
 </div>
 <div class="hidecontrol">
     <p>加意PC联合登陆将获得以下权限:</p>
@@ -33,8 +34,68 @@ minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
     </ul>
 </div>
 <footer>
-    <small>Copyright © 2010 - 2017 Tencent. All Rights Reserved.
-    </small>
+    <small>Copyright © 2010 - 2017 Tencent. All Rights Reserved.</small>
 </footer>
 </body>
 </html>
+<script>
+    $(function () {
+        //用户名验证
+        $('.moble').focus(function () {
+            if ($('.moble').val() == '格式不正确！') {
+                $('.moble').val('');
+                $('.moble').css('color', '#333333');
+            } else {
+                $('.moble').css('color', '#333333');
+            }
+        });
+        $('.moble').blur(function () {
+            var $reg1 = /^[1][3-9][0-9]{9}$/;
+            var $reg2 = /^[0-9]{6,11}@[a-z]{2}\.[a-z]{3}(\.[a-z]{2})?$/i;
+            if ($('.moble').val() == '') {
+                $('.moble').val('');
+                $('.moble').css('color', '#333333');
+            } else {
+                if ($reg1.test($('.moble').val()) || $reg2.test($('.moble').val())) {
+                    $('.moble').css('color', 'green');
+                } else {
+                    $('.moble').css('color', 'red');
+                    $('.moble').val('格式不正确！');
+                }
+            }
+        });
+        //密码验证
+        $('.password').focus(function () {
+            if ($('.password').val() == '密码格式不正确！') {
+                $('.password').val('');
+                $('.password').css('color', '#333333');
+            } else {
+                $('.password').css('color', '#333333');
+            }
+        });
+        $('.password').blur(function () {
+            var $reg = /^[a-zA-Z]+\w{5,11}$/;
+            if ($('.password').val() == '') {
+                $('.password').val('');
+                $('.password').css('color', '#333333');
+            } else {
+                if ($reg.test($('.password').val())) {
+                    $('.password').css('color', 'green');
+                } else {
+                    $('.password').css('color', 'red');
+                    $('.password').val('密码格式不正确！');
+                }
+            }
+        });
+
+        //登录按钮
+        $('.loand').click(function () {
+            if (($('.moble').val() == '519909684' || $('.moble').val() == '519909684@qq.com') && ($('.password').val() == 'Qq123456')) {
+                open('indexPage');
+            } else {
+                alert("用户名或密码不正确");
+            }
+        })
+    })
+
+</script>

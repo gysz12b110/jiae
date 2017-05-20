@@ -13,6 +13,7 @@
     display: flex;
     text-align: center;
     box-sizing: border-box;
+    z-index: 1000;
 }
 .am-header-nav div a{
     color: white;
@@ -76,10 +77,11 @@ form {
 }
 
 .form-img {
-    padding-top: 0.5%;
     margin-right: 11%;
-    margin-top: 0;
     float: right !important;
+}
+.form-img img{
+    height: 36px;
 }
 
 .form-img input {
