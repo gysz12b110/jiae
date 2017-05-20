@@ -1,0 +1,19 @@
+.am-modal {
+    width: 270px;
+    position: fixed;
+    /*display: none;*/
+    z-index: 1110;
+    left: 50%;
+    margin-left: -135px;
+    /*margin-top: 0;*/
+    top: 50%;
+    text-align: center;
+}
+element.style {
+    display: block;
+    margin-top: -66px;
+}
+.am-modal.am-modal-active {
+    opacity: 1;
+        transform: scale(1);
+}

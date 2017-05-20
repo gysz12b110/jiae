@@ -6,6 +6,12 @@ var execute=function(app, urlParser, tools,pool){
     app.get("/loginPage",function(req,res){
        res.sendFile(path+"/public/pages/login.html");
     })
+    app.get("/indexPage",function(req,res){
+       res.sendFile(path+"/public/pages/index.html");
+    })
+     app.get("/QQPage",function(req,res){
+       res.sendFile(path+"/public/pages/QQlogin.html");
+    })
     app.post("/register",urlParser,function(req,res){
         //接收参数
         var mobile=req.body.mobile;

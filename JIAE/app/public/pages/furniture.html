@@ -1,0 +1,685 @@
+
+
+<!--加载资源-->
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords"
+	content="创意电商、新品电商、创意产品、创意家居、创意设计、创意礼物、创意生活、设计师、极客">
+<meta name="description"
+	content="加意新品(jiae.com)是一种创意的生活方式，让每个人享受设计的乐趣，每天加一点创意。 对于消费者，你可以抢鲜购买到原创的设计精品，也可以找到设计师为你提供专属的创意设计服务。 对于设计师，你可以免费发布设计新品和设计服务，帮助你自由实现设计梦想。">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+  <title>加意新品</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="shortcut icon" href="../assets/image/favicon.ico">
+  
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="../assets/image/app-icon72x72@2x.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content='加意新品'/>
+  <link rel="apple-touch-icon-precomposed" href="../assets/image/app-icon72x72@2x.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="../assets/image/app-icon72x72@2x.png">
+  <meta name="msapplication-TileColor" content="#0e90d2">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+  <link rel="stylesheet" href="../assets/css/amazeui.min.css">
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>以获得更好的体验！</p>
+<![endif]-->
+    <link rel="stylesheet" href="../assets/css/public.css">
+    <link rel="stylesheet" href="../assets/css/furniture.2.css">
+
+<style>
+.headerSerachDiv {
+	top: 10px;
+	position: relative;
+	width: 90%;
+	border-radius: 20px;
+	background-color: transparent;
+	margin: 0 5% !important;
+}
+.headSearchInput {
+	border: none;
+	width: 100%;
+	padding: 5px;
+	background-color: rgba(255, 255, 255, 0.3);
+	color: #ffffff;
+}
+ .headSerchIcon{
+ 	position: fixed;
+    right: 14%;
+    top: 1.2%;
+ }
+.headerSerachDiv input:focus::-webkit-input-placeholder, input:hover::-webkit-input-placeholder{
+	color: #f2f2f2;
+	transition: color.5s;
+}
+.headerSerachDiv input:focus {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+li {
+	list-style: none;
+}
+.am-nav-ver {
+	float: left;
+}
+.am-nav-ver>li {
+	float: none;
+}
+.am-tabs {
+	overflow: hidden;
+}
+.am-tabs-ver {
+	border: 1px solid transparent;
+}
+.am-nav>li+li {
+	margin-top: 0px;
+}
+.am-nav-tabs>li {
+	border-bottom: 0px;
+	border-right: 0px;
+}
+.am-nav-tabs>li>a {
+	border: 1px solid #ddd;
+}
+.am-nav-tabs{position: absolute;}
+.am-nav-tabs>li.am-active>a, .am-nav-tabs>li.am-active>a:focus,
+	.am-nav-tabs>li.am-active>a:hover {
+	border-right-color: transparent;
+	border-bottom-color: #ddd;
+}
+.am-nav-tabs>li>a {
+	margin-right: 0px;
+}
+.secondli {
+	/* padding-left: 2rem; */
+	/* margin-top: 1rem; */
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+.secondli a {
+	color: #999;
+	font-size: 1.2rem;
+	font-weight: 300;
+	padding-left: .4rem;
+}
+.secondli img {
+	display: block;
+	margin: auto;
+}
+.am-nav>li>a {
+	padding: 1rem;
+}
+.am-tabs li a {
+	height: 5rem;
+	font-weight: 200;
+}
+.am-tabs-nav li {
+	background: #f1f1f1;
+	margin-bottom: 1px;
+}
+.am-tabs-nav li a {
+	font-size: 1.5rem;
+	padding-top: 1.5rem;
+}
+</style>
+
+</head>
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--<script src="../assets/js/jquery.m.js"></script>-->
+<!--<![endif]-->
+<script src="../assets/js/jquery203.js"></script>
+<script src="../assets/js/handlebars.min.js"></script>
+<script src="../assets/js/amazeui.min.js"></script>
+<script src="../assets/js/amazeui.lazyload.min.js"></script>
+<script src="../assets/js/util.js"></script>
+<script src="../assets/js/template.js"></script>
+  <script type="text/javascript">
+  var progress;
+// vf
+  function changeTitleClass(id){
+		$("#container .headIcon").removeClass("footerTitleMiaoActive").addClass("footerTitleMiao");
+		$("#container .headTitle").removeClass("footerTitleFontActive").addClass("footerTitleFont");
+		$("#"+id+"Icon").addClass("footerTitleMiaoActive");
+		$("#"+id+"Title").addClass("footerTitleFontActive");
+	}
+  function noTitleClass(){
+		$("#container .headIcon").removeClass("footerTitleMiaoActive").addClass("footerTitleMiao");
+		$("#container .headTitle").removeClass("footerTitleFontActive").addClass("footerTitleFont");
+	}
+
+  </script>
+  
+	<script src="../assets/js/search.js"></script>
+	<!-- 在catalog页面 -->
+	<script type="text/javascript">
+		$(function(){
+			// changeTitleClass('catalog');
+		});
+	</script>
+	<script type="text/javascript">
+	$(function(){ 	
+		var nowCataId = '2', nowLi = "", firstCatalogLiArray = [];
+		var $firstcatalogli = $("#firstCatalog li");
+		$firstcatalogli.each(function(){
+			var tmpId = $(this).attr("data-id");
+			firstCatalogLiArray.push(tmpId);
+			if(nowCataId == tmpId) {
+				nowLi = nowCataId;
+				return false;
+			}
+		});
+		
+		if(nowLi == "") nowCataId = firstCatalogLiArray[0];
+		$("#firstCatalog li").removeClass("am-active");
+		$(".j-catalog-" + nowCataId).addClass("am-active");
+		$("#doc-tab-demo-2 .am-tab-panel").removeClass("am-active");
+		$("#secondCatalog_" + nowCataId).addClass("am-active");
+		// changeCatalog(nowCataId); 
+		
+	});
+	
+	function initData(id,title,imageUrl,catas, targetUrl){
+		var data = {'title':title,'imageUrl':imageUrl,'catas':catas,'targetUrl':targetUrl};
+		var html = template('Catalog-template', data);
+		$("#secondCatalog_"+id).html(html);
+	}
+	function changeCatalog(catalogId){
+		$zeModal.modal();
+		var postmsg = {
+				'catalogId' : catalogId
+			};
+		// $.ajax({
+		// 	beforeSend : function(xhr) {
+		// 		xhr.setRequestHeader('X-CSRFToken', $("input[name='csrfmiddlewaretoken']").val());
+		// 	},
+		// 	url : "changeCatalog/",
+		// 	data : postmsg,
+		// 	type : "post",
+		// }).done(function(msg) {
+		// 	if (msg.status == 0) {
+		// 		var title = msg.title;
+		// 		var imageUrl=msg.imageUrl;
+		// 		var catas = new Array(),cata;
+		// 		$.each(msg.secondCatalog,function(i,val){
+		// 			cata = {
+		// 					'catalogId':val.catalogId,	
+		// 					'catalogName':val.catalogName,
+		// 					'title':val.title,
+		// 					'imageUrl':val.logoUrl
+		// 				}
+		// 				catas.push(cata);
+		// 		});
+		// 		initData(msg.catalog.catalogId,title,imageUrl,catas, msg.catalog.targetUrl);
+		// 	}
+		// 	if (msg.status == 1) {
+		// 	}
+		// 	$zeModal.modal('close');
+		// }).fail(function(jqXHR, textStatus) {
+		// 	$zeModal.modal('close');
+		// 	// console.log("error");
+		// });
+	}
+	</script>
+	
+
+	<script id="Catalog-template" type="text/html">
+		{{if targetUrl}}
+			<a href="{{targetUrl}}">
+				<img alt="{{title}}" style="width: 100%; height: auto;" class="lazy" data-original="{{imageUrl}}" src="{{imageUrl}}">
+			</a>
+			{{else}}
+				<img alt="{{title}}" style="width: 100%; height: auto;" class="lazy" data-original="{{imageUrl}}" src="{{imageUrl}}">
+		{{/if}}
+				{{each catas as item index}}
+                    <li class="secondli" id="J-nav2-{{index}}">
+                         <a href="catalogDetail?catalogId={{item.catalogId}}">						
+                               <img class="lazy" data-original="{{item.imageUrl}}" src="{{item.imageUrl}}">
+						{{item.catalogName }}</a>
+					</li>
+                {{/each}}
+    </script>
+<body class="J-static-page" id="J-category-list">
+
+	<header data-am-widget="header"
+		class="am-header am-header-default am-header-fixed">
+		<div class=" am-form-group am-header-title headerSerachDiv"
+			id="J-top-search">
+			<input type="text"
+				class="am-form-field am-input-sm headSearchInput keywords am-round"
+				placeholder="快搜新品" value="小目智能护眼宝" onfocus="if(value=='小目智能护眼宝'){value=''}"
+				onblur="if(value==''){value='小目智能护眼宝'}"
+				style="border: none; width: 100%; padding: 5px; padding-left: 15px;">
+			<a class="headSerchIcon btn-submit am-input-group-btn" href="javascript:;"> 
+				<i class="am-icon-search am-header-icon" style="line-height: 30px;height: 30px;overflow: hidden;"></i>
+			</a>
+		</div>
+	</header>
+	<!-- 头部结束 -->
+
+	<!-- 一级菜单 -->
+	<div class="am-tabs" data-am-tabs="{noSwipe: 1}" id="doc-tab-demo-1">
+
+				<ul id="firstCatalog" class="am-tabs-nav am-nav am-nav-ver"
+					style="padding-top: 1rem;">
+
+										<li class="am-active j-catalog-3" data-id="3"><a href="#"
+											onclick="changeCatalog(3)">优选家居</a></li>
+
+										<li class="j-catalog-4" data-id="4"><a href="#"
+											onclick="changeCatalog(4)">品味厨房</a></li>
+											
+
+										<li class="j-catalog-5" data-id="5"><a href="#"
+											onclick="changeCatalog(5)">生活电器</a></li>
+
+										<li class="j-catalog-6" data-id="6"><a href="#"
+											onclick="changeCatalog(6)">极客数码</a></li>
+
+										<li class="j-catalog-8" data-id="7"><a href="#"
+											onclick="changeCatalog(7)">美酒伴侣</a></li>
+
+										<li class="j-catalog-7" data-id="8"><a href="#"
+											onclick="changeCatalog(8)">轻松办公</a></li>
+			
+				</ul>
+
+			<!-- 二级菜单 -->
+				<div class="am-tabs-bd am-tabs-ver" id="doc-tab-demo-2">
+							
+				<div id="secondCatalog_3" class="am-tab-panel ">
+					<a href="http://www.jiae.com/productdetail?productId=1000013">
+						<img alt="优选家居" style="width: 100%; height: auto;" class="lazy" data-original="../assets/image/sec-img/jxjj.jpg" src="../assets/image/sec-img/jxjj.jpg">
+					</a>
+					
+						
+							<li class="secondli" id="J-nav2-0">
+								<a href="catalogDetail?catalogId=1000022">						
+									<img class="lazy" data-original="../assets/image/type/贴心设计.png" src="../assets/image/type/贴心设计.png">
+								贴心设计</a>
+							</li>
+						
+							<li class="secondli" id="J-nav2-1">
+								<a href="catalogDetail?catalogId=1000023">						
+									<img class="lazy" data-original="../assets/image/type/杂物收纳.png" src="../assets/image/type/杂物收纳.png">
+								杂物收纳</a>
+							</li>
+						
+							<li class="secondli" id="J-nav2-2">
+								<a href="catalogDetail?catalogId=1000025">						
+									<img class="lazy" data-original="../assets/image/type/竹语伞.png" src="../assets/image/type/竹语伞.png">
+								竹语伞</a>
+							</li>
+						
+							<li class="secondli" id="J-nav2-3">
+								<a href="catalogDetail?catalogId=1000024">						
+									<img class="lazy" data-original="../assets/image/type/起居日用.png" src="../assets/image/type/起居日用.png">
+								起居日用</a>
+							</li>
+						
+							<li class="secondli" id="J-nav2-4">
+								<a href="catalogDetail?catalogId=1000021">						
+									<img class="lazy" data-original="../assets/image/type/精致生活.png" src="../assets/image/type/精致生活.png">
+								精致生活</a>
+							</li>
+				
+										</div>
+										<div id="secondCatalog_4" class="am-tab-panel">
+					<a href="http://www.jiae.com/productdetail?productId=1000013">
+						<img alt="品味厨房" style="width: 100%; height: auto;" class="lazy" data-original="../assets/image/sec-img/ppcf.jpg" src="../assets/image/sec-img/ppcf.jpg">
+					</a>
+					
+						
+							<li class="secondli" id="J-nav2-0">
+								<a href="catalogDetail?catalogId=1000022">						
+									<img class="lazy" data-original="../assets/image/type/餐具.png" src="../assets/image/type/餐具.png">
+								餐具</a>
+							</li>
+						
+							<li class="secondli" id="J-nav2-1">
+								<a href="catalogDetail?catalogId=1000023">						
+									<img class="lazy" data-original="../assets/image/type/刀具.png" src="../assets/image/type/刀具.png">
+								刀具</a>
+							</li>
+						
+							<li class="secondli" id="J-nav2-2">
+								<a href="catalogDetail?catalogId=1000025">						
+									<img class="lazy" data-original="../assets/image/type/竹语伞.png" src="../assets/image/type/竹语伞.png">
+								竹语伞</a>
+							</li>
+						
+							<li class="secondli" id="J-nav2-3">
+								<a href="catalogDetail?catalogId=1000024">						
+									<img class="lazy" data-original="../assets/image/type/厨房小帮手.png" src="../assets/image/type/厨房小帮手.png">
+								厨房小帮手</a>
+							</li>
+						
+							<li class="secondli" id="J-nav2-4">
+								<a href="catalogDetail?catalogId=1000021">						
+									<img class="lazy" data-original="../assets/image/type/厨具.png" src="../assets/image/type/防潮保鲜.png">
+								防潮保鲜</a>
+							</li>
+							<li class="secondli" id="J-nav2-4">
+								<a href="catalogDetail?catalogId=1000021">						
+									<img class="lazy" data-original="../assets/image/type/实用小工具.png" src="../assets/image/type/实用小工具.png">
+								实用小工具</a>
+							</li>
+							<li class="secondli" id="J-nav2-4">
+								<a href="catalogDetail?catalogId=1000021">						
+									<img class="lazy" data-original="../assets/image/type/鸡蛋托&泡茶器.png" src="../assets/image/type/鸡蛋托&泡茶器.png">
+								鸡蛋托&泡茶器</a>
+							</li>
+							<li class="secondli" id="J-nav2-4">
+								<a href="catalogDetail?catalogId=1000021">						
+									<img class="lazy" data-original="../assets/image/type/砧板.png" src="../assets/image/type/砧板.png">
+								砧板</a>
+							</li>
+							<li class="secondli" id="J-nav2-4">
+								<a href="catalogDetail?catalogId=1000021">						
+									<img class="lazy" data-original="../assets/image/type/水壶水杯.png" src="../assets/image/type/水壶水杯.png">
+								水壶水杯</a>
+							</li>
+						</div>
+
+
+										<div id="secondCatalog_5" class="am-tab-panel">
+
+
+
+											<a href="http://www.jiae.com/productdetail?productId=1000013">
+						<img alt="优选家居" style="width: 100%; height: auto;" class="lazy" data-original="../assets/image/sec-img/shdq.jpg" src="../assets/image/sec-img/shdq.jpg">
+					</a>
+					
+						
+							<li class="secondli" id="J-nav2-0">
+								<a href="catalogDetail?catalogId=1000022">						
+									<img class="lazy" data-original="../assets/image/type/空气净化.png" src="../assets/image/type/空气净化.png">
+								贴心设计</a>
+							</li>
+						
+							<li class="secondli" id="J-nav2-1">
+								<a href="catalogDetail?catalogId=1000023">						
+									<img class="lazy" data-original="../assets/image/type/LED灯.png" src="../assets/image/type/LED灯.png">
+								杂物收纳</a>
+							</li>
+						
+							<li class="secondli" id="J-nav2-2">
+								<a href="catalogDetail?catalogId=1000025">						
+									<img class="lazy" data-original="../assets/image/type/台灯.png" src="../assets/image/type/台灯.png">
+								竹语伞</a>
+							</li>
+						
+							<li class="secondli" id="J-nav2-3">
+								<a href="catalogDetail?catalogId=1000024">						
+									<img class="lazy" data-original="../assets/image/type/小家电.png" src="../assets/image/type/小家电.png">
+								起居日用</a>
+							</li>
+						
+							<li class="secondli" id="J-nav2-4">
+								<a href="catalogDetail?catalogId=1000021">						
+									<img class="lazy" data-original="../assets/image/type/钟系列.png" src="../assets/image/type/钟系列.png">
+								精致生活</a>
+							</li>
+										</div>
+
+										<div id="secondCatalog_6" class="am-tab-panel">
+
+
+											<a href="http://www.jiae.com/productdetail?productId=1000013">
+						<img alt="优选家居" style="width: 100%; height: auto;" class="lazy" data-original="../assets/image/sec-img/jksm.jpg" src="../assets/image/sec-img/jksm.jpg">
+					</a>
+					
+						
+							<li class="secondli" id="J-nav2-0">
+								<a href="catalogDetail?catalogId=1000022">						
+									<img class="lazy" data-original="../assets/image/type/智能生活.png" src="../assets/image/type/智能生活.png">
+								智能生活</a>
+							</li>
+						
+							<li class="secondli" id="J-nav2-1">
+								<a href="catalogDetail?catalogId=1000023">						
+									<img class="lazy" data-original="../assets/image/type/手机搭档.png" src="../assets/image/type/手机搭档.png">
+								手机搭档</a>
+							</li>
+						
+							<li class="secondli" id="J-nav2-2">
+								<a href="catalogDetail?catalogId=1000025">						
+									<img class="lazy" data-original="../assets/image/type/电脑周边.png" src="../assets/image/type/电脑周边.png">
+								电脑周边</a>
+							</li>
+						
+							<li class="secondli" id="J-nav2-3">
+								<a href="catalogDetail?catalogId=1000024">						
+									<img class="lazy" data-original="../assets/image/type/屏幕清洁.png" src="../assets/image/type/屏幕清洁.png">
+								屏幕清洁</a>
+							</li>
+						
+							<li class="secondli" id="J-nav2-4">
+								<a href="catalogDetail?catalogId=1000021">						
+									<img class="lazy" data-original="../assets/image/type/移动电源.png" src="../assets/image/type/移动电源.png">
+								移动电源</a>
+							</li>
+							<li class="secondli" id="J-nav2-4">
+								<a href="catalogDetail?catalogId=1000021">						
+									<img class="lazy" data-original="../assets/image/type/音箱.png" src="../assets/image/type/音箱.png">
+								音箱</a>
+							</li>
+							<li class="secondli" id="J-nav2-4">
+								<a href="catalogDetail?catalogId=1000021">						
+									<img class="lazy" data-original="../assets/image/type/耳机.png" src="../assets/image/type/耳机.png">
+								耳机</a>
+							</li>
+							<li class="secondli" id="J-nav2-4">
+								<a href="catalogDetail?catalogId=1000021">						
+									<img class="lazy" data-original="../assets/image/type/多功能插座.png" src="../assets/image/type/多功能插座.png">
+								多功能插座</a>
+							</li>
+										</div>
+
+										<div id="secondCatalog_1000009" class="am-tab-panel">
+
+											<a href="http://www.jiae.com/productdetail?productId=1000013">
+						<img alt="优选家居" style="width: 100%; height: auto;" class="lazy" data-original="../assets/image/sec-img/mjbl.jpg" src="../assets/image/sec-img/mjbl.jpg">
+					</a>
+					
+						
+							<li class="secondli" id="J-nav2-0">
+								<a href="catalogDetail?catalogId=1000022">						
+									<img class="lazy" data-original="../assets/image/type/红酒.png" src="../assets/image/type/红酒.png">
+								红酒</a>
+							</li>
+						
+							<li class="secondli" id="J-nav2-1">
+								<a href="catalogDetail?catalogId=1000023">						
+									<img class="lazy" data-original="../assets/image/type/瓶塞.png" src="../assets/image/type/瓶塞.png">
+								瓶塞</a>
+							</li>
+						
+							<li class="secondli" id="J-nav2-2">
+								<a href="catalogDetail?catalogId=1000025">						
+									<img class="lazy" data-original="../assets/image/type/酒架.png" src="../assets/image/type/酒架.png">
+								酒架</a>
+							</li>
+						
+							<li class="secondli" id="J-nav2-3">
+								<a href="catalogDetail?catalogId=1000024">						
+									<img class="lazy" data-original="../assets/image/type/杯贴.png" src="../assets/image/type/杯贴.png">
+								杯贴</a>
+							</li>
+						
+							<li class="secondli" id="J-nav2-4">
+								<a href="catalogDetail?catalogId=1000021">						
+									<img class="lazy" data-original="../assets/image/type/鸡尾酒.png" src="../assets/image/type/鸡尾酒.png">
+								鸡尾酒</a>
+							</li>
+							<li class="secondli" id="J-nav2-4">
+								<a href="catalogDetail?catalogId=1000021">						
+									<img class="lazy" data-original="../assets/image/type/酒品降温.png" src="../assets/image/type/鸡尾酒.png">
+								鸡尾酒</a>
+							</li>
+							
+							
+										</div>
+									
+										<div id="secondCatalog_1000008" class="am-tab-panel">
+
+											<a href="http://www.jiae.com/productdetail?productId=1000013">
+						<img alt="轻松办公" style="width: 100%; height: auto;" class="lazy" data-original="../assets/image/sec-img/qsbg.jpg" src="../assets/image/sec-img/qsbg.jpg">
+					</a>
+					
+						
+							<li class="secondli" id="J-nav2-0">
+								<a href="catalogDetail?catalogId=1000022">						
+									<img class="lazy" data-original="../assets/image/type/办公助手.png" src="../assets/image/type/办公助手.png">
+								办公助手</a>
+							</li>
+						
+							<li class="secondli" id="J-nav2-1">
+								<a href="catalogDetail?catalogId=1000023">						
+									<img class="lazy" data-original="../assets/image/type/桌面收纳.png" src="../assets/image/type/桌面收纳.png">
+								桌面收纳</a>
+							</li>
+						
+							<li class="secondli" id="J-nav2-2">
+								<a href="catalogDetail?catalogId=1000025">						
+									<img class="lazy" data-original="../assets/image/type/桌面整理.png" src="../assets/image/type/桌面整理.png">
+								桌面整理</a>
+							</li>
+						
+							<li class="secondli" id="J-nav2-3">
+								<a href="catalogDetail?catalogId=1000024">						
+									<img class="lazy" data-original="../assets/image/type/卡夹.png" src="../assets/image/type/卡夹.png">
+								卡夹</a>
+							</li>
+				</div>
+				
+        
+        </div>
+	</div>
+
+	<!--底部-->
+	 
+<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default "
+      id="">
+      <ul id="container" class="am-navbar-nav am-cf am-avg-sm-4" style="background-color:#fff;" id="J-footer-menu">
+          <li>
+            <a href="home" class="">
+                  <span id="homeIcon"  class="am-icon-home footerTitleMiao footerTitleMiaoActive headIcon"></span>
+                <span id="homeTitle"  class="am-navbar-label footerTitleFont footerTitleFontActive headTitle">首页</span>
+            </a>
+          </li>
+          <li>
+            <a href="catalog?catalogId=2" class="" id="catalog">
+                  <span id="catalogIcon" class="am-icon-bars footerTitleMiao headIcon"></span>
+                <span id="catalogTitle"  class="am-navbar-label footerTitleFont headTitle">分类</span>
+            </a>
+          </li>
+          <li>
+            <a href="basket" class="">
+                  <span id="cartIcon"  class="am-icon-shopping-cart footerTitleMiao headIcon" style="position:relative;">
+                  
+                  <span class="am-badge am-badge-danger am-round" id="J-cart-num" 
+                  style="position: absolute;top: -.2rem;left: .8rem;color: #fff;border-radius: 1000px;-webkit-text-fill-color: #fff;-webkit-text-stroke-color: #fff;font-weight: 300;display:none;">
+                  0</span>
+                  </span>
+                <span id="cartTitle"  class="am-navbar-label footerTitleFont headTitle">购物车</span>
+            </a>
+          </li>
+          <li >
+          	
+	            	
+	                
+	                	<a href="login">	
+	                	<!-- <a id="J-hd-btn-login" href="login"> -->
+			               	<span id="loginIcon" class="am-icon-user footerTitleMiao headIcon"></span>
+                			<span id="loginTitle" class="am-navbar-label footerTitleFont headTitle">登录</span>
+			            </a>
+	                
+	            
+          </li>
+      </ul>
+  </div>
+
+<script type="text/javascript">
+</script>
+
+	<!--消息层-->
+	  
+
+<!--消息框 -->
+<div class="am-modal am-modal-alert" tabindex="-1" id="jiae-alert">
+  <div class="am-modal-dialog">
+    <div class="am-modal-hd">消息</div>
+    <div class="am-modal-bd" id="alertMsg">
+    </div>
+    <div class="am-modal-footer">
+      <span class="am-modal-btn">确定</span>
+    </div>
+  </div>
+</div>
+
+<!-- 输入框 -->
+<div class="am-modal am-modal-prompt" tabindex="-1" id="jiae-prompt">
+  <div class="am-modal-dialog">
+    <div class="am-modal-hd">请输入商品数量</div>
+    <div class="am-modal-bd">
+      <input type="text" class="am-modal-prompt-input" id="inputNum">
+      <input type="hidden" id="tempId">
+    </div>
+    <div class="am-modal-footer">
+      <span class="am-modal-btn" data-am-modal-cancel>取消</span>
+      <span class="am-modal-btn" data-am-modal-confirm>提交</span>
+    </div>
+  </div>
+</div>
+
+<!-- 确认弹出层 -->
+<div class="am-modal am-modal-confirm" tabindex="-1" id="jiae-confirm">
+  <div class="am-modal-dialog">
+    <div class="am-modal-hd" id="confirmTitle"></div>
+    <div class="am-modal-bd" id="confirmMsg">
+    </div>
+     <input type="hidden" id="tempOrderid">
+    <div class="am-modal-footer">
+      <span class="am-modal-btn" data-am-modal-cancel>取消</span>
+      <span class="am-modal-btn" data-am-modal-confirm>确定</span>
+    </div>
+  </div>
+</div>
+
+<!-- shoppingCart确认弹出层 -->
+<div class="am-modal am-modal-confirm" tabindex="-1" id="jiae-confirm-shoppingCart">
+  <div class="am-modal-dialog">
+    <div class="am-modal-hd" id="confirmTitle1"></div>
+    <div class="am-modal-bd" id="confirmMsg1">
+    </div>
+     <input type="hidden" id="tempOrderid">
+    <div class="am-modal-footer">
+      <span class="am-modal-btn" data-am-modal-cancel>取消</span>
+      <span class="am-modal-btn" data-am-modal-confirm>确定</span>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
