@@ -643,7 +643,7 @@ textarea {
     bottom:49px;
     right:0;
 }
-.priceadd {
+/*.priceadd {
     float: right;
     height: 4rem;
     line-height: 1.6rem;
@@ -651,7 +651,7 @@ textarea {
     margin-top:-35px;
     padding-right: .5rem;
     /*position:absolute;*/
-}
+}*/
 
 .gwc{
     /*margin-left: 14.9rem;*/
@@ -687,7 +687,7 @@ textarea {
     list-style: none;
     margin: 0 .4em 1.5em;
     height: 60px;
-    width: 60px;
+    /*width: 60px;*/
     text-align: center;
     cursor: pointer;
     background-position-x: center;
@@ -798,4 +798,37 @@ textarea {
     overflow: hidden;
     white-space: nowrap;
     display: block;
+}
+
+.nameadd {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 100;
+    display: block;
+    height: 22px;
+    line-height: 22px;
+    margin: 0;
+    font-weight: bold;
+}
+.designadd {
+    font-size: 1.2rem;
+    color: #999;
+    height: 20px;
+    line-height: 20px;
+    margin: 0;
+    position: fixed;
+    margin-top: -3px;
+    left: 0.7rem;
+}
+.priceadd {
+    float: right;
+    height: 4rem;
+    padding-right: .2rem;
+    margin-top: -1.7rem;
+}
+.curprice {
+    /*display: block;*/
+    margin-bottom: 0px;
+    color: white;
+    font-weight: 700;
 }
