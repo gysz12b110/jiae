@@ -173,6 +173,7 @@ a, ins {
 }
 .weibo{
     background-image: url("../image/shoping-img/l7/1/171-3.png");
+    
 }
 .wetcat{
     background-image: url("../image/shoping-img/l7/1/171-4.png");
@@ -612,7 +613,7 @@ textarea {
     height: 46px;  
     position: fixed;  
     color:white;
-    bottom:50px;
+    bottom:49px;
 }
 /*.addtxt {
     font-size: 1.4rem;
@@ -639,7 +640,7 @@ textarea {
     width: 44%;
     background: #ccc;
     position: fixed;
-    bottom:50px;
+    bottom:49px;
     right:0;
 }
 .priceadd {
@@ -655,7 +656,7 @@ textarea {
 .gwc{
     /*margin-left: 14.9rem;*/
      position: fixed;
-    bottom:51px;
+    bottom:49px;
     right:70px;
     width:71.4px;
 }
@@ -665,7 +666,7 @@ textarea {
 .j-buy-btn {
     background: rgb(254, 148, 2);
    position: fixed;
-    bottom:51px;
+    bottom:49px;
     right:.1rem;
     width:69.4px;
 }
@@ -685,7 +686,7 @@ textarea {
     zoom: 1;
     list-style: none;
     margin: 0 .4em 1.5em;
-    height: 83px;
+    height: 60px;
     width: 60px;
     text-align: center;
     cursor: pointer;
@@ -757,4 +758,44 @@ textarea {
     width: 100%;
     font-size: .8em;
     text-align: center;
+}
+
+.am-panel-bd-color {
+    padding-left: 1.4rem;
+    background-color: #f9f9f9;
+    padding-top: 1.0rem;
+}
+.selectcolor {
+    display: inline-block;
+    color: #3a3a3a;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-top: .6em;
+}
+.rightshow {
+    width: 80%;
+    height: auto;
+    float: right;
+}
+.am-panel-bd-color .active {
+    border: 1px solid #F10D0D!important;
+    background: #e25a5b!important;
+}
+.am-btn {
+    display: inline-block;
+    margin-bottom: 0;
+    padding: .5em 1em;
+    white-space: nowrap;
+    border-radius: 0;
+    cursor: pointer;
+}
+.am-panel-bd-color .active a {
+    color: #fff;
+}
+
+.attrofa {
+    /*color: #000;*/
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
 }
