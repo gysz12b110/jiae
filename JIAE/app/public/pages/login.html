@@ -8,6 +8,7 @@ minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
     <link rel="stylesheet" href="../assets/css/reset.css"/>
     <link rel="stylesheet" href="../assets/css/amazeui.min.css"/>
     <link rel="stylesheet" href="../assets/css/login.css">
+    <script src="../assets/js/jquery203.js"></script>
     <title>登录</title>
 </head>
 <body>
@@ -19,21 +20,25 @@ minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
 <form action="">
     <div class="am-form-group">
         <div class="am-input-group am-u-sm-12">
-            <span class="am-input-group-label"><i class="am-icon-user am-icon-fw"></i></span><input type="text" placeholder="请输入手机号或邮箱">
+            <span class="am-input-group-label">
+                <i class="am-icon-user am-icon-fw"></i></span>
+            <input class="moble" type="text" placeholder="请输入手机号或邮箱">
         </div>
         <div class="am-input-group am-u-sm-12">
-            <span class="am-input-group-label"><i class="am-icon-lock am-icon-fw"></i></span><input style="padding: 1.5rem" type="text" placeholder="密码">
+            <span class="am-input-group-label">
+                <i class="am-icon-lock am-icon-fw"></i>
+            </span><input class="password" style="padding: 1.5rem" type="text" placeholder="密码">
         </div>
 
         <div class="am-u-sm-offset-1 ">
-            <button class="am-form-field am-u-sm-4">登录</button>
+            <button class="am-form-field am-u-sm-4 loand"><a href="indexPage">登录</a></button>
         </div>
     </div>
 </form>
 <div class="am-form-group fast-login">
     <a href="zhaomim.html" class="am-form-group-a">忘记密码？</a>
     <p class="desc">使用其它账号登录</p>
-    <div class="login-lists"><a href="QQlogin.html" class="am-icon-qq"></a></div>
+    <div class="login-lists"><a href="QQPage" class="am-icon-qq"></a></div>
 </div>
 <!--底部-->
 <div class="am-navbar">
@@ -48,5 +53,65 @@ minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
     </ul>
 </div>
 </body>
-
 </html>
+<script>
+    $(function () {
+        //用户名验证
+        $('.moble').focus(function () {
+            if ($('.moble').val() == '格式不正确！') {
+                $('.moble').val('');
+                $('.moble').css('color', '#333333');
+            } else {
+                $('.moble').css('color', '#333333');
+            }
+        });
+        $('.moble').blur(function () {
+            var $reg1 = /^[1][3-9][0-9]{9}$/;
+            var $reg2 = /^[0-9]{6,11}@[a-z]{2}\.[a-z]{3}(\.[a-z]{2})?$/i;
+            if ($('.moble').val() == '') {
+                $('.moble').val('');
+                $('.moble').css('color', '#333333');
+            } else {
+                if ($reg1.test($('.moble').val()) || $reg2.test($('.moble').val())) {
+                    $('.moble').css('color', 'green');
+                } else {
+                    $('.moble').css('color', 'red');
+                    $('.moble').val('格式不正确！');
+                }
+            }
+        });
+        //密码验证
+        $('.password').focus(function () {
+            if ($('.password').val() == '密码格式不正确！') {
+                $('.password').val('');
+                $('.password').css('color', '#333333');
+            } else {
+                $('.password').css('color', '#333333');
+            }
+        });
+        $('.password').blur(function () {
+            var $reg = /^[a-zA-Z]+\w{5,11}$/;
+            if ($('.password').val() == '') {
+                $('.password').val('');
+                $('.password').css('color', '#333333');
+            } else {
+                if ($reg.test($('.password').val())) {
+                    $('.password').css('color', 'green');
+                } else {
+                    $('.password').css('color', 'red');
+                    $('.password').val('密码格式不正确！');
+                }
+            }
+        });
+
+        //登录按钮
+        $('.loand').click(function () {
+            if (($('.moble').val() == '17691179518' || $('.moble').val() == '519909684@qq.com') && ($('.password').val() == 'Qq123456')) {
+                open('indexPage');
+            } else {
+                alert("用户名或密码不正确");
+            }
+        })
+    })
+
+</script>
