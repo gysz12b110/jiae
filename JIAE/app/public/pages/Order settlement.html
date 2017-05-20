@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myapp">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,
@@ -8,13 +8,18 @@ minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
 		<link rel="stylesheet" type="text/css" href="../assets/css/reset.css"/>
 		<link rel="stylesheet" type="text/css" href="../assets/css/amazeui.min.css"/>
 		<link rel="stylesheet" type="text/css" href="../assets/css/Order settlement.css"/>
+		<script src="../assets/js/angular1.5.8.js/"></script>
 	</head>
-	<body>
+	<body ng-controller="myctrl">
 		
 			<header class="parent">
-			 <div class="first"></div>
+			 <div class="first">
+			 	<a href=""></a>
+			 </div>
 			 <div class="second">订单结算</div>
-			 <div class="third"></div>
+			 <div class="third">
+			 	<a href=""></a>
+			 </div>
 		</header>
 		<section class="cargo">
 			<div class="info">
@@ -29,7 +34,7 @@ minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
 						<li class="am_list_item">
 							<div class="left">
 								<a href="">
-									<img class="am_img" src="../assets/image/Order/san.jpg" alt="" />
+									<img class="am_img" src="../assets/image/order/san.jpg" alt="" />
 								</a>
 							</div>
 							<div class="right">
@@ -83,23 +88,23 @@ minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
 			
 		</div>
 		<div class="border"></div>
-			<div class="new_list">
-				<ul class="am_ul">
+			<div class="new_list" >
+				<ul class="am_ul" ng-repeat="goods in list">
 					<li>
 						<span class="li_left">合计金额</span>
-						<span class="li_right">￥249.00</span>
+						<span class="li_right">￥{{good.title}}</span>
 					</li>
 					<li>
 						<span class="li_left">优惠</span>
-						<span class="li_right">-￥0.00</span>
+						<span class="li_right">-￥{{good.title}}</span>
 					</li>
 					<li>
 						<span class="li_left">运费</span>
-						<span class="li_right">￥0.00</span>
+						<span class="li_right">￥{{good.title}}</span>
 					</li>
 					<li>
 						<span class="li_left">积分抵扣</span>
-						<span class="li_right">-￥0.00</span>
+						<span class="li_right">-￥{{good.title}}</span>
 					</li>
 				</ul>
 			</div>

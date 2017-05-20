@@ -237,7 +237,7 @@ a, ins {
 }
 .am-panel-group{
     width:100%;
-    height: 10rem;
+   margin: 1rem 0;
     
 }
 .panel-color{
@@ -378,6 +378,7 @@ img{
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    font-size: 1.6rem;
 }
 .am-cf li.selected a{
     color: #c62c2a;
@@ -599,10 +600,10 @@ textarea {
 	margin-left: 0rem;
 	height: 46px;
 	position: fixed;
-	position: absolute;
+	
 	bottom: 0px;
-	bottom: 0px;
-	margin-bottom: 46px;
+	
+	margin-bottom: 49px;
 	margin-top: expression(this.style.pixelHeight + document.documentElement.scrollTop)
 }  
 .leftdesc {
@@ -646,12 +647,17 @@ textarea {
 /*.priceadd {
     float: right;
     height: 4rem;
+<<<<<<< HEAD
     line-height: 1.6rem;
     bottom: 40px;
     margin-top:-35px;
     padding-right: .5rem;
     /*position:absolute;*/
 }*/
+=======
+    padding-right: .2rem;
+}
+>>>>>>> bcb28c21a23cdc6173c712278d6ccbfa1cac2923
 
 .gwc{
     /*margin-left: 14.9rem;*/
@@ -760,6 +766,7 @@ textarea {
     text-align: center;
 }
 
+<<<<<<< HEAD
 .am-panel-bd-color {
     padding-left: 1.4rem;
     background-color: #f9f9f9;
@@ -800,6 +807,8 @@ textarea {
     display: block;
 }
 
+=======
+>>>>>>> bcb28c21a23cdc6173c712278d6ccbfa1cac2923
 .nameadd {
     color: #fff;
     font-size: 1.4rem;
@@ -810,6 +819,17 @@ textarea {
     margin: 0;
     font-weight: bold;
 }
+<<<<<<< HEAD
+=======
+.curprice {
+    display: block;
+    margin-bottom: 0px;
+    color: #FFF;
+    font-weight: 300;
+    font-size: 1.6rem;
+}
+
+>>>>>>> bcb28c21a23cdc6173c712278d6ccbfa1cac2923
 .designadd {
     font-size: 1.2rem;
     color: #999;
@@ -820,6 +840,7 @@ textarea {
     margin-top: -3px;
     left: 0.7rem;
 }
+<<<<<<< HEAD
 .priceadd {
     float: right;
     height: 4rem;
@@ -831,4 +852,9 @@ textarea {
     margin-bottom: 0px;
     color: white;
     font-weight: 700;
+=======
+.nameanddesign {
+    display: inline-block;
+    padding-left: 1rem;
+>>>>>>> bcb28c21a23cdc6173c712278d6ccbfa1cac2923
 }
