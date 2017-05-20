@@ -31,6 +31,7 @@
 		
 		<link rel="stylesheet" href="../assets/css/public.css">
 		<link rel="stylesheet" href="../assets/css/home.css">
+		<link rel="stylesheet" href="../assets/css/gouwuche.css">
 		<script src="../assets/js/jquery203.js"></script>
 		<script src="../assets/js/amazeui.min.js"></script>
 		<script src="../assets/js/jquery.lazyload.js" type="text/javascript" charset="utf-8"></script>
@@ -40,39 +41,41 @@
 	<body style="background-color: #f7f7f7;" class="am-with-fixed-header am-with-fixed-navbar">
 		
 		<!--底部-->
-		<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="">
-			<ul id="container" class="am-navbar-nav am-cf am-avg-sm-4" style="background-color:#fff;" id="J-footer-menu">
-				<li>
-					<a href="#" class="" id="home">
-						<span id="homeIcon" class="am-icon-home footerTitleMiao footerTitleMiaoActive headIcon"></span>
-						<span id="homeTitle" class="am-navbar-label footerTitleFont footerTitleFontActive headTitle">首页</span>
-					</a>
-				</li>
-				<li>
-					<a href="/views/catalog.html" class="" id="typelist">
-						<span id="typelistIcon" class="am-icon-bars footerTitleMiao headIcon"></span>
-						<span id="typelistTitle" class="am-navbar-label footerTitleFont headTitle">分类</span>
-					</a>
-				</li>
-				<li>
-					<a href="/views/shopcar.html" class="" id="cart">
-						<span id="cartIcon" class="am-icon-shopping-cart footerTitleMiao headIcon" style="position:relative;">
-                  <span class="am-badge am-badge-danger am-round" id="J-cart-num" 
-                  style="position: absolute;top: -.2rem;left: .8rem;color: #fff;border-radius: 1000px;-webkit-text-fill-color: #fff;-webkit-text-stroke-color: #fff;font-weight: 300;display:none;">
+		<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default  am-no-layout" id="">
+      <ul id="container" class="am-navbar-nav am-cf am-avg-sm-4" style="background-color:#fff;">
+          <li>
+            <a href="index.html" class="">
+                  <span id="homeIcon" class="am-icon-home footerTitleMiao footerTitleMiaoActive headIcon"></span>
+                <span id="homeTitle" class="am-navbar-label footerTitleFont footerTitleFontActive headTitle">首页</span>
+            </a>
+          </li>
+          <li>
+            <a href="furniture.html" class="" id="catalog">
+                  <span id="catalogIcon" class="am-icon-bars footerTitleMiao headIcon"></span>
+                <span id="catalogTitle" class="am-navbar-label footerTitleFont headTitle">分类</span>
+            </a>
+          </li>
+          <li>
+            <a href="shopping cart.html" class="">
+                  <span id="cartIcon" class="am-icon-shopping-cart footerTitleMiao headIcon" style="position:relative;">
+                  
+                  <span class="am-badge am-badge-danger am-round" id="J-cart-num" style="position: absolute;top: -.2rem;left: .8rem;color: #fff;border-radius: 1000px;-webkit-text-fill-color: #fff;-webkit-text-stroke-color: #fff;font-weight: 300;display:none;">
                   0</span>
-						</span>
-						<span id="cartTitle" class="am-navbar-label footerTitleFont headTitle">购物车</span>
-					</a>
-				</li>
-				<li>
-					<a href="javascript:;" id="login">
-						<!-- <a id="J-hd-btn-login" href="login"> -->
-						<span id="loginIcon" class="am-icon-user footerTitleMiao headIcon"></span>
-						<span id="loginTitle" class="am-navbar-label footerTitleFont headTitle">登录</span>
-					</a>
-				</li>
-			</ul>
-		</div>
+                  </span>
+                <span id="cartTitle" class="am-navbar-label footerTitleFont headTitle">购物车</span>
+            </a>
+          </li>
+          <li>
+
+	                	<a href="login.html">	
+	                	<!-- <a id="J-hd-btn-login" href="login"> -->
+			               	<span id="loginIcon" class="am-icon-user footerTitleMiao headIcon"></span>
+                			<span id="loginTitle" class="am-navbar-label footerTitleFont headTitle">登录</span>
+			            </a>
+
+          </li>
+      </ul>
+  </div>
 		<!--在这里编写你的代码-->
 
 		<!--搜索框-->
@@ -80,7 +83,7 @@
 			<!--搜索框加按钮-->
 			<div class="am-from-group am-header-title headerSerachDiv">
 				<form action=""><input type="text" id="search" class="am-form-field am-input-sm headSearchInput keywords am-round" placeholder="快搜新品" value="小目智能护眼宝" onfocus="if(value=='小目智能护眼宝'){value=''}" onblur="if(value==''){value='小目只能护眼宝'}" style="border: none;width: 100%;padding: 5px;padding-left: 15px;" />
-				<a href="C:\Users\MZ\Desktop\jiae\jiae\JIAE\app\public\pages\search.html" class="headSerchIcon btn-submit am-input-group-btn">
+				<a href="javascript:;" class="headSerchIcon btn-submit am-input-group-btn">
 					<i class="am-icon-search am-header-icon" style="line-height: 30px;height: 30px;overflow: hidden;">
     			</i>
 				</a>
@@ -364,7 +367,7 @@
 							</a>
 							<a href="##" class="am-icon-btn am-icon-shopping-cart productShopping am-icon-sm j-btn-catalog" ></a>
 							<h3 class="am-gallery-title productDescT" style="margin-top: -30px;">随身杯料理机</h3>
-							<span class="am-gallery-desc productDesc productDescT"></span>
+							<span class="am-gallery-desc productDesc productDescT">Morphy Ricahrds·美国</span>
 							<span class="am-gallery-desc productDesc productDescT" style="color: red;">￥ 299.00</span>
 						</div>
 					</li>
@@ -768,7 +771,8 @@
 			}
 			//搜索跳转并传搜索框的值发到search页面
 			$('.btn-submit').click(function() {
-				location.href = "/views/search.html"; //+ ?id=$('#search').val()
+				
+				location.href = "search.html"; //+ ?id=$('#search').val()
 				localStorage.setItem("search", $('#search').val())
 				console.log($('#search').val());
 			});

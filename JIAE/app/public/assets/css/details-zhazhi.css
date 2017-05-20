@@ -1,3 +1,9 @@
+html {
+
+	overflow-y: scroll;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
 .clearboth{
     overflow: hidden;
     clear: both;
@@ -61,6 +67,7 @@ a, ins {
 }
 .details {
     background-color: #f9f9f9;
+    margin-top:30px;
 }
 .img-responsive{
     display: none;
@@ -122,7 +129,7 @@ a, ins {
     /*left: 0;*/
    margin-top:5rem;
    width:100%;
-   display: block;
+   /*display: block;*/
     visibility: inherit;
     bottom: 0px;
     transition-property: all;
@@ -133,7 +140,7 @@ a, ins {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: none;
+    /*display: none;*/
 }
 .share-fxhid ul{
     position: relative;
@@ -166,6 +173,7 @@ a, ins {
 }
 .weibo{
     background-image: url("../image/shoping-img/l7/1/171-3.png");
+    
 }
 .wetcat{
     background-image: url("../image/shoping-img/l7/1/171-4.png");
@@ -229,7 +237,7 @@ a, ins {
 }
 .am-panel-group{
     width:100%;
-    height: 10rem;
+   margin: 1rem 0;
     
 }
 .panel-color{
@@ -370,6 +378,7 @@ img{
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    font-size: 1.6rem;
 }
 .am-cf li.selected a{
     color: #c62c2a;
@@ -584,4 +593,267 @@ textarea {
 }
 .am-tabs-bd div.selected{
     display:block;
+}
+.foot {
+	width: 100%;
+	z-index: 999;
+	margin-left: 0rem;
+	height: 46px;
+	position: fixed;
+	
+	bottom: 0px;
+	
+	margin-bottom: 49px;
+	margin-top: expression(this.style.pixelHeight + document.documentElement.scrollTop)
+}  
+.leftdesc {
+    background-color: #000;
+    opacity: 0.8;
+    width: 56%;
+    display: inline-block;
+    height: 46px;  
+    position: fixed;  
+    color:white;
+    bottom:49px;
+}
+/*.addtxt {
+    font-size: 1.4rem;
+    padding-top: 1.2rem;
+    color: #fff;
+    height: 46px;
+    text-align: center;
+    margin-top: 0rem;
+    font-weight: bold;
+}*/
+.addtxt {
+    font-size: 1.4rem;
+    font-weight: 200;
+    padding-top: 1.2rem;
+    color: #fff;
+    width: 22%;
+    height: 46px;
+    text-align: center;
+    margin-top: -.4rem;
+    background-color: #e25a5b;
+    font-weight: bold;
+}
+.j-sellout {
+    width: 44%;
+    background: #ccc;
+    position: fixed;
+    bottom:49px;
+    right:0;
+}
+/*.priceadd {
+    float: right;
+    height: 4rem;
+<<<<<<< HEAD
+    line-height: 1.6rem;
+    bottom: 40px;
+    margin-top:-35px;
+    padding-right: .5rem;
+    /*position:absolute;*/
+}*/
+=======
+    padding-right: .2rem;
+}
+>>>>>>> bcb28c21a23cdc6173c712278d6ccbfa1cac2923
+
+.gwc{
+    /*margin-left: 14.9rem;*/
+     position: fixed;
+    bottom:49px;
+    right:70px;
+    width:71.4px;
+}
+
+
+
+.j-buy-btn {
+    background: rgb(254, 148, 2);
+   position: fixed;
+    bottom:49px;
+    right:.1rem;
+    width:69.4px;
+}
+
+
+
+.-mob-share-ui.-mob-share-ui-theme-slide-bottom ul.-mob-share-list {
+    position: relative;
+    padding: 1em 1em 0;
+    height: auto;
+    width: auto;
+    text-align: left;
+}
+
+.-mob-share-ui ul.-mob-share-list li {
+    display: inline-block;
+    zoom: 1;
+    list-style: none;
+    margin: 0 .4em 1.5em;
+    height: 60px;
+    /*width: 60px;*/
+    text-align: center;
+    cursor: pointer;
+    background-position-x: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.-mob-share-ui ul.-mob-share-list li p {
+    zoom: 1;
+    left: 0;
+    bottom: -1.5em;
+    z-index: 999999997;
+    margin: 0 auto;
+    line-height: 1em;
+    color: #5e5e5e;
+}
+.-mob-share-ui .-mob-share-close, .-mob-share-ui ul.-mob-share-list li p {
+    display: block;
+    position: absolute;
+    width: 100%;
+    font-size: .8em;
+    text-align: center;
+}
+
+.-mob-share-ui.-mob-share-ui-theme-slide-bottom {
+    background-color: #fff;
+    position: fixed;
+    height: auto;
+    text-align: center;
+    left: 0;
+    
+}
+.-mob-share-ui.-mob-share-ui-theme {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.-mob-share-ui {
+    margin: 0;
+    padding: 0;
+    
+    border-bottom: 1px solid #e9e9e9;
+    z-index: 999999999;
+    color: #333;
+    font-size: 16px;
+}
+.-mob-share-ui, .-mob-share-ui-bg {
+    
+    width: 100%;
+    
+}
+.-mob-share-ui.-mob-share-ui-theme-slide-bottom .-mob-share-close {
+    position: relative;
+}
+.-mob-share-ui .-mob-share-close {
+    clear: both;
+    bottom: 0;
+    z-index: 999999999;
+    height: 3em;
+    line-height: 3em;
+    background: #EFEFEF;
+    cursor: pointer;
+}
+.-mob-share-ui .-mob-share-close, .-mob-share-ui ul.-mob-share-list li p {
+    display: block;
+    
+    width: 100%;
+    font-size: .8em;
+    text-align: center;
+}
+
+
+.am-panel-bd-color {
+    padding-left: 1.4rem;
+    background-color: #f9f9f9;
+    padding-top: 1.0rem;
+}
+.selectcolor {
+    display: inline-block;
+    color: #3a3a3a;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-top: .6em;
+}
+.rightshow {
+    width: 80%;
+    height: auto;
+    float: right;
+}
+.am-panel-bd-color .active {
+    border: 1px solid #F10D0D!important;
+    background: #e25a5b!important;
+}
+.am-btn {
+    display: inline-block;
+    margin-bottom: 0;
+    padding: .5em 1em;
+    white-space: nowrap;
+    border-radius: 0;
+    cursor: pointer;
+}
+.am-panel-bd-color .active a {
+    color: #fff;
+}
+
+.attrofa {
+    /*color: #000;*/
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+}
+
+
+.nameadd {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 100;
+    display: block;
+    height: 22px;
+    line-height: 22px;
+    margin-left:1rem;
+    font-weight: bold;
+}
+
+
+.curprice {
+    display: block;
+    margin-bottom: 0px;
+    color: #FFF;
+    font-weight: 300;
+    font-size: 1.6rem;
+}
+
+
+.designadd {
+    font-size: 1.2rem;
+    color: #999;
+    height: 20px;
+    line-height: 20px;
+    margin: 0;
+    position: fixed;
+    margin-top: -3px;
+    left: 0.7rem;
+}
+
+.priceadd {
+    float: right;
+    height: 4rem;
+    padding-right: .2rem;
+    margin-top: -1.7rem;
+}
+.curprice {
+    /*display: block;*/
+    margin-bottom: 0px;
+    color: white;
+    font-weight: 700;
+
+.nameanddesign {
+    display: inline-block;
+    padding-left: 1rem;
+
 }

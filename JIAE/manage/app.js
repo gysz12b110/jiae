@@ -33,7 +33,8 @@ app.get("/", function(req, res) {
 userRoutes(app, urlParser, tools,pools);
 app.listen(9000);
 
-
+//品牌管理
+begtableRoutes(app, urlParser, tools,pools);
 
 //角色管理
 roleRoutes(app, urlParser, tools,pools);
