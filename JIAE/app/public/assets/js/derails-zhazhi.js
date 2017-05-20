@@ -16,3 +16,15 @@ $('.right-color .attr').click(function(){
 
     $('.details .center-block').eq(index).addClass('selected').siblings().removeClass('selected');
 })
+
+$('.share-box').click(function(){
+    $('.box_163css').animate({
+        'bottom':'0px'
+    },1000)
+})
+
+$('.-mob-share-close').click(function(){
+    $('.box_163css').animate({
+        'bottom':'-180px'
+    },1000)
+})
