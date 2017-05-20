@@ -127,15 +127,11 @@ section{
 	width: 95%;
 	margin: 5% auto;
 }
-section>img{
-	width: 91%;
-	display: block;
-	margin: 0 auto;
-}
+
 .delivery-p1{
-	font-size: 1rem;
-	color: #666;
-	font-weight: 700;
+	color: #e74144;
+    font-weight: 700;
+    font-size: 1rem;
 }
 .delivery-p2{
 	font-size: 1rem;
