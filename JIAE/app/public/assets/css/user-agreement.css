@@ -1,0 +1,175 @@
+footer {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	bottom: 0;
+	background: white;
+}
+
+.foot-ul {
+	width: 100%;
+	padding-left: 0;
+}
+
+.foot-ul>li>a {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.foot-ul>li {
+	list-style: none;
+	float: left;
+	/*background: skyblue;*/
+	width: 25%;
+}
+
+.foot-ul>li>a>span {
+	width: 100%;
+	text-align: center;
+	display: block;
+	color: #666;
+	font-family: "微软雅黑";
+	font-size: 0.9em;
+}
+
+.home-page {
+	color: rgb(231, 65, 68);
+	width: 24px;
+	height: 24px;
+	margin: 4px auto 0;
+	display: block;
+	line-height: 24px;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke-color: rgb(231, 65, 68);
+	font-style: normal;
+}
+
+.home-page:before {
+	content: "\f015";
+	display: inline-block;
+	font-size: inherit;
+	-webkit-font-smoothing: antialiased;
+	font-size: 22px;
+	vertical-align: middle;
+}
+
+.classify {
+	color: #666;
+	width: 24px;
+	height: 24px;
+	margin: 4px auto 0;
+	display: block;
+	line-height: 24px;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke-color: #666;
+	font-style: normal;
+}
+
+.classify:before {
+	content: "\f0c9";
+	display: inline-block;
+	font-size: inherit;
+	-webkit-font-smoothing: antialiased;
+	font-size: 22px;
+	vertical-align: middle;
+}
+
+.shopping-cart {
+	color: #666;
+	width: 24px;
+	height: 24px;
+	margin: 4px auto 0;
+	display: block;
+	line-height: 24px;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke-color: #666;
+	font-style: normal;
+}
+
+.shopping-cart:before {
+	content: "\f07a";
+	display: inline-block;
+	font-size: inherit;
+	-webkit-font-smoothing: antialiased;
+	font-size: 22px;
+	vertical-align: middle;
+}
+
+.logo-in {
+	color: #666;
+	width: 24px;
+	height: 24px;
+	margin: 4px auto 0;
+	display: block;
+	line-height: 24px;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke-color: #666;
+	font-style: normal;
+}
+
+.logo-in:before {
+	content: "\f007";
+	display: inline-block;
+	font-size: inherit;
+	-webkit-font-smoothing: antialiased;
+	font-size: 22px;
+	vertical-align: middle;
+}
+section{
+	width: 95%;
+	margin: 5% auto;
+}
+.agreement-p1{
+	color: #000;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.agreement-p2{
+	color: #000;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
