@@ -1,6 +1,5 @@
-<!DOCTYPE html>
-<html>
-
+<!DOCTYPE html >
+<html ng-app="myapp">
 	<head>
 		<meta charset="utf-8">
 		<title>商品管理</title>
@@ -10,92 +9,89 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="format-detection" content="telephone=no">
-         <link rel="stylesheet" href="css/button.css"/>
-         <link rel="stylesheet" href="css/reset.css" />
-		<link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.css" />
+		<link rel="stylesheet" href="css/button.css" />
+		<link rel="stylesheet" href="css/reset.css" />
 		<link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css" />
-		<!--<link rel="stylesheet" href="plugins/layui/css/layui.css" media="all" />
-		<link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">-->
-		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+		<script type="text/javascript" src='js/require.js' async="true" defer></script>
+		<script src="js/require.js" data-main="js/goodsListMain.js"></script>
 	</head>
 
 	<body>
-        		<div>
+		<div>
 			<fieldset>
-				<legend class="goods">商品类型管理</legend>
+				<legend class="goods">商品信息管理</legend>
 				<div id="top">
 					<div>
-						<button class="add addOne"><i class="fa fa-plus-square icon"></i>新增</button>
-						<button class="add"><i class="fa fa-trash icon"></i>删除</button>
-						<button class="add"><i class="fa fa-file icon"></i>保存</button>
+						<button class="add addOne" id='addGoods'><i class="fa fa-plus-square icon"></i>新增</button>
 					</div>
 					<div class="right">
 						<form>
-							<input type="input" placeholder="你要搜索的内容" class="inp"/>
+							<input type="input" placeholder="你要搜索的内容" class="inp" />
 							<button>搜索</button>
 						</form>
 					</div>
 				</div>
-				<table>
-					<tr class="oneTr">
-						<td style="width: 60px; height: 40px;"><input type="checkbox" name="goods" value="全选">全选</td>
-						
-						<td style="width: 60px; height: 40px;">ID</td>
-						<td>商品图片</td>
-						<td style="width:350px; height: 40px;">商品名称</td>
-						<td style="width: 100px; height: 40px;">数量</td>
-						<td style="width: 250px; height: 40px;">操作</td>
-						
+				<table ng-controller='myctrl'>
+					<thead>
+						<tr class="oneTr">
+							<td style="width: 60px; height: 40px;"><input type="checkbox" name="goods" value="全选">全选</td>
+							<td style="width: 60px; height: 40px;">ID</td>
+							<td>商品图片</td>
+							<td style="width:350px; height: 40px;">商品名称</td>
+							<td style="width: 100px; height: 40px;">单价</td>
+							<td style="width: 100px; height: 40px;">功能</td>
+							<td style="width: 250px; height: 40px;">操作</td>
+						</tr>
+					</thead>
+					
+					<tbody>
+						<tr>
+							<td><input type="checkbox" name="goods" value="全选"></td>
+							<td>{{goods.id}}</td>
+							<td><img src="images/l111.jpg" /></td>
+							<td class="inputZhu">
+								<p contenteditable="true" class="inputZhu"  ng-model="goods.title"></p>
+							</td>
+							<td><input ng-model="goods.price"  style="width: 70px;"/></td>
+							<td><input ng-model="goods.power"  style="width: 70px;"/></td>
+							<td class="addbtn" style="margin-top: -68px;">
+								<span  title="修改"  class="upDataGoods  fa fa-file" ></span>
+								<span  title="删除"  class=" delGoods  fa fa-trash"></span>
+							</td>
 					</tr>
-					<tr>
-						<td><input type="checkbox" name="goods" value="全选"></td>
-						
-						<td>1</td>
-						<td><img src="images/l111.jpg"/></td>
-						<td class="inputZhu"><p contenteditable="true" class="inputZhu"/>竹语，七夕系列情侣伞</p></td>
-						<td>￥249.00</td>
-						<td class="addbtn">
-							<span class="fa fa-file" style="display: inline-block;"></span> <!--保存-->
-							<span class="fa fa-pencil-square-o"></span> <!--修改-->
-							<span class="fa fa-trash"></span><!--删除-->
-						</td>
-					</tr>
-				
+					</tbody>
 				</table>
-				
 			</fieldset>
 		</div>
 		<div class="mark"></div>
 		<div class="addtab">
 			<div class="">
-			    <h2>添加商品</h2>
-			    <span class="del">x</span>
+				<h2>添加商品</h2>
+				<span class="del">x</span>
 			</div>
 			<div class="content">
 				<form>
 					<div>
+						<label>商品图片：</label>
+						<input type="text" placeholder="请输入名称" />
+					</div>
+					<div>
 						<label>商品名称：</label>
-						<input type="text" placeholder="请输入名称"/>
+						<input type="text" placeholder="请输入关键词" /></div>
+					<div>
+						<label>单价：</label>
+						<input type="file" />
 					</div>
 					<div>
-					<label>商品描述：</label>
-					<input type="text" placeholder="请输入关键词"/></div>
-					<div>
-					<label>商品图片：</label>
-					<input type="file"/>
-					</div>
-					<div>
-					<label>商品简介：</label>
-					<textarea name="cols"></textarea>
+						<label>功能：</label>
+						<textarea name="cols"></textarea>
 					</div>
 					<button>提交</button>
 				</form>
 			</div>
 		</div>
-		<!--<script type="text/javascript" src="plugins/layui/layui.js"></script>-->
 	</body>
 
 </html>
-<script src="js/button.js"></script>
 
 </html>

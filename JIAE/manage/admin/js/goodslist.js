@@ -1,6 +1,8 @@
-var app=angular.module("myapp",[]);
+//商品分类JS代码
+define(['jquery','angular'],function($,angular){
+	console.log(angular)
+	var app=angular.module("myapp",[]);
 		app.controller("myctrl",["$scope","$http",function($scope,$http){
-			
 			$scope.httpGet=function(url,data){
 				$http({
 					method:"GET",
@@ -126,7 +128,7 @@ var app=angular.module("myapp",[]);
 				});
 			});
 		}]);
-
+})
 
 			
 		
