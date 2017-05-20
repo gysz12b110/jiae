@@ -1,6 +1,6 @@
 var mysql = require("mysql");
 var pool = mysql.createPool({
-	host: '192.168.1.146',
+	host: '192.168.1.112',
 	user: 'root',
 	password: '',
 	database: 'jiae',

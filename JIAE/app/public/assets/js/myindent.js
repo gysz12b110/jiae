@@ -34,4 +34,8 @@ $(function(){
 		
 	});
 	
+	
+})
+$.get("myindent",function(data){
+	console.log(data);
 })

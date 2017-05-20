@@ -5,18 +5,21 @@ var bodyParser = require("body-parser"); //URL解析库
 var pools = require("./server/utils/pool"); //工具类
 var tools = require("./server/utils/tools");
 var userRoutes = require("./server/controller/userController");
+var myindentRoutes = require("./server/controller/myindentRoutesController");
 var MessageXSend = require('./server/sms/messageXSend.js');
 var urlParser = bodyParser.urlencoded({ extended: false });
 app.use(express.static(__dirname + "/public"));
 
 app.get("/", function(req, res) {
-    res.sendFile(__dirname + "/public/pages/register.html");
+    res.sendFile(__dirname + "/public/pages/myindent.html");
 })
 
 //用户路由
 userRoutes(app, urlParser, tools,pools);
-app.listen(9000);
-console.log("server start in 9000");
+//提交
+myindentRoutes(app, urlParser, tools,pools);
+app.listen(9100);
+console.log("server start in 9100");
 
 
 //短信验证码
