@@ -1,4 +1,4 @@
-$(function() {
+define(['jquery','angular'],function($,angular){
 	//页面加载
 	$.get("listRole", function(data) {
 		var app = angular.module("myapp", []);

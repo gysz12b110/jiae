@@ -1,0 +1,75 @@
+ /*头部背景颜色*/
+  .am-header-default{
+    background-color: #e25a5b;
+  }
+  /*头部文字*/
+  .am-header-text{
+  	font-size: 1.4rem;
+  }
+  /*间距背景*/
+  .am-between-bg{
+  	background-color: #F9F9F9;
+  	height: 0.6rem;
+  }
+/*图片圆角*/
+.am-radius-pic{
+	border-radius: 20px;
+}
+/*图片框div设置内边距*/
+.am-gallery-item{
+	padding: 0.6rem;
+}
+/*商品名称*/
+.center{
+	padding-top: 5px;
+	font-size: 0.3rem;
+	color: #b0b0b0;
+	text-align: center;
+}
+/*h3*/
+.des1{
+	font-weight: 300;
+	color: #333333;
+	display: inline-block;
+	clear: right;
+	margin-top: 0.2rem;
+}
+.des2{
+	font-weight: 200;
+	display: inline-block;
+	margin-top: 0.2rem;
+}
+
+.price{
+	font-size: 0.9rem;
+	font-weight: 300;
+	color: #E74143;
+	text-align: center;
+	margin-top: 0.4rem;
+	margin-bottom: 0.4rem;
+} 
+.divider{
+	border-right: solid 1px #f1f1f1;
+	padding: 0px;
+	margin: 0px;
+}
+ /*头部背景颜色*/
+  .am-header-default{
+    background-color: #e25a5b;
+  }
+ .am-header-fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 1010;
+}
+.secondli img {
+	display: block;
+	margin: auto;
+	background: none;
+	width:60px;
+	height:60px;
+}
+
