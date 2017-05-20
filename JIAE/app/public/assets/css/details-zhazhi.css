@@ -236,7 +236,7 @@ a, ins {
 }
 .am-panel-group{
     width:100%;
-    height: 10rem;
+   margin: 1rem 0;
     
 }
 .panel-color{
@@ -377,6 +377,7 @@ img{
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    font-size: 1.6rem;
 }
 .am-cf li.selected a{
     color: #c62c2a;
@@ -598,10 +599,10 @@ textarea {
 	margin-left: 0rem;
 	height: 46px;
 	position: fixed;
-	position: absolute;
+	
 	bottom: 0px;
-	bottom: 0px;
-	margin-bottom: 46px;
+	
+	margin-bottom: 49px;
 	margin-top: expression(this.style.pixelHeight + document.documentElement.scrollTop)
 }  
 .leftdesc {
@@ -645,11 +646,7 @@ textarea {
 .priceadd {
     float: right;
     height: 4rem;
-    line-height: 1.6rem;
-    bottom: 40px;
-    margin-top:-35px;
-    padding-right: .5rem;
-    /*position:absolute;*/
+    padding-right: .2rem;
 }
 
 .gwc{
@@ -757,4 +754,37 @@ textarea {
     width: 100%;
     font-size: .8em;
     text-align: center;
+}
+
+.nameadd {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 100;
+    display: block;
+    height: 22px;
+    line-height: 22px;
+    margin: 0;
+    font-weight: bold;
+}
+.curprice {
+    display: block;
+    margin-bottom: 0px;
+    color: #FFF;
+    font-weight: 300;
+    font-size: 1.6rem;
+}
+
+.designadd {
+    font-size: 1.2rem;
+    color: #999;
+    height: 20px;
+    line-height: 20px;
+    margin: 0;
+    position: fixed;
+    margin-top: -3px;
+    left: 0.7rem;
+}
+.nameanddesign {
+    display: inline-block;
+    padding-left: 1rem;
 }
