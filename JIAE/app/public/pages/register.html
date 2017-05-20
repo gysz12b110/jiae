@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,
 minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
-    <link rel="stylesheet" href="../assets/css/reset.css"/>
     <link rel="stylesheet" href="../assets/css/amazeui.min.css"/>
+    <link rel="stylesheet" href="../assets/css/reset.css"/>
     <link rel="stylesheet" href="../assets/css/resigster.css">
+    <script src="../assets/js/jquery203.js"></script>
     <title>注册</title>
 </head>
 <body>
@@ -18,64 +18,105 @@ minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
 </header>
 <form action="register" method="post" onsubmit="return xx()">
     <div class="am-form-group">
-        <div class="am-u-sm-offset-1 am-u-sm-offset-2 "><input id="email" type="text" class="am-form-field" name="mobile" placeholder="请输入手机或邮箱">
+        <div class="am-u-sm-offset-1 am-u-sm-offset-2 ">
+            <input id="email" type="text" class="am-form-field" name="mobile" placeholder="请输入手机或邮箱">
         </div>
     </div>
     <div class="am-form-group">
-        <div class="am-u-sm-offset-1"><input id="password" type="password" class="am-form-field" name="pass" placeholder="请输入密码"></div>
+        <div class="am-u-sm-offset-1">
+            <input id="password" type="password" class="am-form-field" name="pass" placeholder="请输入密码"></div>
     </div>
     <div class="am-form-group">
-        <div class="am-u-sm-offset-1"><input type="password" class="am-form-field" placeholder="请再次输入密码"></div>
+        <div class="am-u-sm-offset-1">
+            <input id="password2" type="password" class="am-form-field" placeholder="请再次输入密码"></div>
     </div>
     <div class="am-form-group ">
-        <div class="am-u-sm-offset-1 am-u-sm-5"><input type="text" class="am-form-field" placeholder="请 输入验证码"></div>
-        <div class="form-img"><img src="../assets/image/yanzheng/yanzm1.jpg" alt=""></div>
+        <div class="am-u-sm-offset-1 am-u-sm-5">
+            <input type="text" class="am-form-field yanzm" placeholder="请输入验证码(区分大小写)"></div>
+        <div class="form-img" id="yantu"></div>
     </div>
-    <div class="am-u-sm-offset-3 "><input type="checkbox"><a href="#">阅读并同意</a><a>《加意用户注册协议》</a></div>
-
+    <div class="am-u-sm-offset-3 ">
+        <input type="checkbox"><a href="#">阅读并同意</a><a>《加意用户注册协议》</a></div>
     <div class="am-form-group">
         <div class="am-u-sm-offset-1 ">
-            <button class="am-form-field am-u-sm-4">立即注册</button>
+            <button class="am-form-field am-u-sm-4 zhuce">立即注册</button>
         </div>
     </div>
 </form>
 <div class="am-form-group fast-login">
     <p class="desc">使用其它账号登录</p>
-    <div class="login-lists"><a href="QQlogin.html" class="am-icon-qq"></a></div>
+    <div class="login-lists"><a href="QQPage" class="am-icon-qq"></a></div>
 </div>
 <!--底部-->
 <div class="am-navbar">
     <ul class="am-navbar-nav">
-        <li><a href="#"><span class="am-icon-home  footerTitleMiao"></span><span
-                class="am-navbar-label">首页</span></a></li>
+        <li><a href="#"><span class="am-icon-home  footerTitleMiao"></span>
+            <span class="am-navbar-label">首页</span></a></li>
         <li><a href="#"><span class="catalog  footerTitleMiao"></span><span class="am-navbar-label">分类</span></a></li>
-        <li><a href="#"><span class="am-icon-shopping-cart footerTitleMiao headIcon"></span><span
-                class="am-navbar-label">购物车</span></a></li>
-        <li><a href="#"><span class="am-icon-user footerTitleMiao footerTitleMiaoActive"></span><span
-                class="am-navbar-label footerTitleMiaoActive">登录</span></a></li>
+        <li><a href="#"><span class="am-icon-shopping-cart footerTitleMiao headIcon"></span>
+            <span class="am-navbar-label">购物车</span></a></li>
+        <li><a href="#"><span class="am-icon-user footerTitleMiao footerTitleMiaoActive"></span>
+            <span class="am-navbar-label footerTitleMiaoActive">登录</span></a></li>
     </ul>
 </div>
 </body>
 <script>
-    var email=document.getElementById("email");
-    var password=document.getElementById("password");
-    var pat = /^[a-zA-Z0-9]+\w+@[a-zA-Z0-9]+.\w+$/;
-    var pat2=/^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\\d{8}$/;
-    var pw=/^[a-zA-Z]\w{5,11}$/;
-//    email.onblur=function(e) {
-//        if (!pat.test(email.value)) {
-//            alert("请正确填写电话号码");
-//        }
-//    };
-//    email.onblur=function(e) {
-//        if (!pat2.test(email.value)) {
-//            alert("非法邮件地址");
-//        }
-//    }
-//    password.onblur=function(e) {
-//        if (!pw.test(password.value)) {
-//            alert("请填写以字母开头6到12位密码");
-//        }
-//    }
+    var email = document.getElementById("email");
+    var password = document.getElementById("password");
+    var password2 = document.getElementById("password2");
+    var pat1 = /^[a-zA-Z0-9]+\w+@[a-zA-Z0-9]+.\w+$/;
+    var pat2 = /^((13[0-9])|(14[5|7])|(15([0-3]|[5-9]))|(18[0,5-9]))\\d{8}$/;
+    var pw = /^[a-zA-Z]\w{5,11}$/;
+    email.onchange = function (e) {
+        if (!pat1.test(email.value) && !pat2.test(email.value)) {
+            alert("请正确填写eamil或电话");
+        }
+    };
+    password.onchange = function (e) {
+        if (!pw.test(password.value)) {
+            alert("请填写以字母开头6到12位密码");
+        }
+    }
+    password2.onchange = function (e) {
+        if (password.value != password2.value) {
+            alert("两次输入密码不一致，请您重新输入");
+        }
+    }
+    var yanyzm;
+    var yzmarr = ['yzm0.png', 'yzm1.png', 'yzm2.png', 'yzm3.png', 'yzm4.png',
+        'yzm5.png', 'yzm6.png', 'yzm7.png', 'yzm8.png', 'yzm9.png'];
+    var yzmsr = ['78SC', 'YS7V', '4CMS', '8SCJ', 'VZBT', 'FAAm', '43TU', 'XSGZ', 'HDBV', 'KTX4'];
+    //随机加载一张验证码
+    var $shu = Math.floor(Math.random() * 10);
+    yanyzm = $shu;
+    $('#yantu').append('<img src="../assets/image/yanzheng/' + yzmarr[$shu] + '" />');
+    $("#yantu").click(function () {
+        $('#yantu').children().remove();
+        var $shu = Math.floor(Math.random() * 10);
+        $('#yantu').append('<img src="../assets/image/yanzheng/' + yzmarr[$shu] + '" />');
+        yanyzm = $shu;
+    });
+    $('.yanzm').focus(function () {
+        if ($('.yanzm').val() == '验证码不正确！') {
+            $('.yanzm').val('');
+            $('.yanzm').css('color', '#333333');
+        } else {
+            $('.yanzm').css('color', '#333333');
+        }
+    });
+    $('.yanzm').blur(function () {
+        if ($('.yanzm').val() == '') {
+            $('.yanzm').val('');
+            $('.yanzm').css('color', '#333333');
+        } else {
+            if ($('.yanzm').val() == yzmsr[yanyzm]) {
+                $('.yanzm').css('color', 'green');
+            } else {
+                $('.yanzm').css('color', 'red');
+                $('.yanzm').val('验证码不正确！');
+            }
+        }
+    })
+
 </script>
 </html>
