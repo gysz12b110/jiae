@@ -128,19 +128,82 @@ section{
 	margin: 5% auto;
 }
 section>img{
-	width: 91%;
+	width: 92%;
 	display: block;
 	margin: 0 auto;
 }
+section>p{
+	width: 92%;
+	display: block;
+	margin: 3% auto;
+}
+section>div{
+	width: 92%;
+	margin: 0 auto;
+}
+section>div>p{
+	width: 100%;
+	display: block;
+	
+}
 .delivery-p1{
-	font-size: 1rem;
-	color: #666;
-	font-weight: 700;
+	color: #e74144;
+    font-weight: 700;
+    font-size: 1rem;
 }
 .delivery-p2{
 	font-size: 1rem;
 	color: #666;
 }
+.delivery-p3{
+	font-size: 1rem;
+	color: #666;
+	text-align: center;
+}
+.poststyle{
+	color: #666;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: underline;
+    display: block;
+    width: 92%;
+    margin: 0 auto;
+}
+.post-duty{
+	
+	font-size: 1rem;
+	color: #666;
+}
+
+.post-duty-p1{
+	font-size: 1rem;
+	color: #666;
+	/*display: none;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

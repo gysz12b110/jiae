@@ -1,0 +1,9 @@
+$(function(){
+	$("post-1").click(function(){
+		if($("post-duty-1").css({display:"block"})){
+			$("post-duty-1").css({display:"none"})
+		}else{
+			$("post-duty-1").css({display:"block"})
+		}
+	})
+})
