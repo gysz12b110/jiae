@@ -9,8 +9,9 @@ minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
 		<link rel="stylesheet" type="text/css" href="../assets/css/amazeui.min.css"/>
 		<link rel="stylesheet" type="text/css" href="../assets/css/Order settlement.css"/>
 		<script src="../assets/js/angular1.5.8.js/"></script>
+		<script src="../assets/js/Order settlement.js" type="text/javascript" charset="utf-8"></script>
 	</head>
-	<body ng-controller="myctrl">
+	<body >
 		
 			<header class="parent">
 			 <div class="first">
@@ -89,22 +90,22 @@ minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
 		</div>
 		<div class="border"></div>
 			<div class="new_list" >
-				<ul class="am_ul" ng-repeat="goods in list">
+				<ul class="am_ul" ng-controller="myctrl">
 					<li>
 						<span class="li_left">合计金额</span>
-						<span class="li_right">￥{{good.title}}</span>
+						<span class="li_right">￥249.00</span>
 					</li>
 					<li>
 						<span class="li_left">优惠</span>
-						<span class="li_right">-￥{{good.title}}</span>
+						<span class="li_right">-￥0.00</span>
 					</li>
 					<li>
 						<span class="li_left">运费</span>
-						<span class="li_right">￥{{good.title}}</span>
+						<span class="li_right">￥0.00</span>
 					</li>
 					<li>
 						<span class="li_left">积分抵扣</span>
-						<span class="li_right">-￥{{good.title}}</span>
+						<span class="li_right">-￥0.00</span>
 					</li>
 				</ul>
 			</div>
